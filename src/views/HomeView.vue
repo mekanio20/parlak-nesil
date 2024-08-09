@@ -9,8 +9,7 @@
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Let Us Make Your Vision a Reality
                     </h1>
-                    <div class="rounded-full w-6 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"
-                        v-show="vote"></div>
+                    <div class="rounded-full w-6 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
                 </div>
             </div>
         </div>
@@ -56,14 +55,8 @@ export default {
         Navbar,
         Background,
     },
-    mounted() {
-        setTimeout(() => {
-            this.vote = true
-        }, 500)
-    },
     data() {
         return {
-            vote: false,
             items: [
                 { id: 1, icon: '/icons/komp.png', title: 'Development of websites of any complexity', subtitle: 'Business card sites / E-commerce / LMS / CRM' },
                 { id: 2, icon: '/icons/phone.png', title: 'Mobile application development', subtitle: 'Android & IOS' },
