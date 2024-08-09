@@ -40,17 +40,6 @@
             </div>
             <div class=" pt-20 flex flex-col items-center justify-center">
                 <img src="/icons/parlak-nesil.png" class="object-cover">
-                <!-- <h4 class="my-28 font-rajdhani font-semibold text-4xl  uppercase" :class="[getMode ? 'text-white' : 'text-black']">Founders</h4>
-                <div class="w-full flex items-center justify-around">
-                    <div class="w-96 flex flex-col items-center">
-                        <img class="object-cover" src="/imgs/manager-1.png">
-                        <h4 class="font-rajdhani font-semibold text-2xl mt-8" :class="[getMode ? 'text-white' : 'text-black']">Name Surname</h4>
-                    </div>
-                    <div class="w-96 flex flex-col items-center">
-                        <img class="object-cover" src="/imgs/manager-2.png">
-                        <h4 class="font-rajdhani font-semibold text-2xl mt-8" :class="[getMode ? 'text-white' : 'text-black']">Name Surname</h4>
-                    </div>
-                </div> -->
             </div>
             <div class="flex flex-col items-center">
                 <h4 class="my-28 font-rajdhani font-semibold text-4xl uppercase" :class="[getMode ? 'text-white' : 'text-black']">Our team</h4>
@@ -68,8 +57,8 @@
                             </p>
                         </div>
                         <div class="flex-2 ml-20 mt-4 self-start">
-                            <div class="px-6 py-7 border border-white text-white rounded-full cursor-pointer" @click="openAccordion(item.id)">
-                                <div class="w-2 h-[1px] bg-white"></div>
+                            <div class="px-[22px] py-7 border-[2px] rounded-full cursor-pointer" :claas="[!getMode ? 'border-black' : 'border-white']" @click="openAccordion(item.id)">
+                                <div class="w-3 h-[1px]" :class="[getMode ? 'bg-white' : 'bg-m_blue-100']"></div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +98,11 @@ export default {
     methods: {
         openAccordion(id) {
             const elem = document.getElementById(id)
-            elem.style.height = '200px'
+            if (elem.style.height == '200px') {
+                elem.style.height = '384px'
+            } else {
+                elem.style.height = '200px'
+            }
         }
     },
     computed: {

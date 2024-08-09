@@ -11,13 +11,14 @@
                         <img class="w-[250px] h-[240px] object-cover" src="/imgs/project-3.png">
                     </div>
                 </div>
-                <div class="flex-1 flex flex-row">
-                    <div class="flex-1 flex flex-col">
-                        <div class="w-full e">
-
+                <div class="flex-1 flex flex-row ml-10">
+                    <div class=" w-3/4 flex flex-col">
+                        <div class="w-full flex flex-col">
+                            <p class="font-rajdhani font-medium text-xl text-m_orange-100 mb-4">Logo Design</p>
+                            <h2 class="font-rajdhani font-medium text-6xl text-white">Freyja project</h2>
                         </div>
                     </div>
-                    <div class="flex-1">
+                    <div class="">
 
                     </div>
                 </div>

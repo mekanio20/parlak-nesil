@@ -9,7 +9,8 @@
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Let Us Make Your Vision a Reality
                     </h1>
-                    <div class="rounded-full w-6 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce" v-show="vote"></div>
+                    <div class="rounded-full w-6 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"
+                        v-show="vote"></div>
                 </div>
             </div>
         </div>
@@ -51,10 +52,14 @@ import Background from '@/components/Background.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default {
     name: "Home",
+    components: {
+        Navbar,
+        Background,
+    },
     mounted() {
         setTimeout(() => {
             this.vote = true
-        }, 500);
+        }, 500)
     },
     data() {
         return {
@@ -68,21 +73,17 @@ export default {
             ]
         }
     },
-    components: {
-        Navbar,
-        Background,
-    },
     methods: {
         ...mapActions(['changeMode']),
     },
     computed: {
         ...mapGetters(['getMode']),
-    },
+    }
 }
 </script>
 
 <style>
 .animate__animated.animate__fadeIn {
-  --animate-duration: 2s;
+    --animate-duration: 2s;
 }
 </style>

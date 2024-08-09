@@ -2,10 +2,7 @@
     <div class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
         <Navbar link="Projects" />
         <!-- top, right -->
-        <img src="/icons/bg-2.png" class="absolute z-10 top-0 right-0 w-[1200px] h-[700px]">
-
-        <!-- bottom, left -->
-        <img src="/icons/bg-3.png" class="absolute z-10 bottom-0 left-0 w-[1200px] h-[1200px]">
+        <img src="/icons/project-bg.png" class="absolute z-10 top-0 right-0">
 
         <div class="px-10 relative z-20">
             <div class="flex items-center justify-center pt-60 pb-40">
