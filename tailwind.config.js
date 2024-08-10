@@ -20,7 +20,9 @@ export default {
           400: '#F5F5F5',
           500: '#4C514C',
           600: '#B9B9B9',
-          700: '#ECEEEC'
+          700: '#ECEEEC',
+          800: '#C7C7C7',
+          900: '#808080'
         },
         m_amber: {
           100: '#2D2828'
@@ -30,6 +32,7 @@ export default {
         jetBrains: ['JetBrains Mono', 'monospace'],
         rajdhani: ['Rajdhani', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        bodoni: ['Bodoni Moda', 'serif'],
       },
     },
     container: {
