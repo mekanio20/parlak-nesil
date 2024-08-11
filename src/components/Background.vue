@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-full fixed z-10">
-        <svg viewBox="0 0 1918 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-full h-full object-cover" viewBox="0 0 1918 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <!-- Glow Filter Definition -->
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
