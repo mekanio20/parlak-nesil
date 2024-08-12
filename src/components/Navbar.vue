@@ -1,7 +1,7 @@
 <template>
     <nav class="">
         <div class="w-full flex items-center justify-between xl:px-10 p-5 fixed top-0 left-0 right-0 z-50"
-            :class="bgColor">
+            :class="[getMode ? 'bg-gray-800 bg-opacity-75' : 'bg-slate-300 bg-opacity-75']">
             <div class="flex items-center">
                 <router-link to="/" class="xl:w-72 sm:w-60 w-52">
                     <img :src="[getMode ? '/icons/logo-white.png' : '/icons/logo.png']">
@@ -67,9 +67,7 @@ export default {
     },
     data() {
         return {
-            isScrolled: false,
             isBurger: false,
-            invalid: false,
             items: [
                 { id: 1, route: '/', name: 'Home' },
                 { id: 2, route: '/about', name: 'About us' },
@@ -86,21 +84,12 @@ export default {
         }
     },
     methods: {
-        // handleScroll() {
-        //     this.isScrolled = window.scrollY > 100
-        // },
         openBurger() {
             this.isBurger = !this.isBurger
-            this.isScrolled = !this.isScrolled
-            this.invalid = !this.invalid
         },
     },
     computed: {
-        ...mapGetters(['getMode']),
-        bgColor() {
-            if (this.getMode && this.isScrolled) return 'bg-gray-800 bg-opacity-75'
-            else if (!this.getMode && this.isScrolled) return 'bg-slate-300 bg-opacity-75'
-        }
+        ...mapGetters(['getMode'])
     },
 }
 </script>

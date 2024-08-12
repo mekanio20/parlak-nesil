@@ -2,24 +2,26 @@
     <div class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
         <Navbar link="Hardware" />
         <!-- top, right -->
-        <img src="/icons/hardware-bg-1.png" class="absolute top-0 right-0 object-cover z-10">
+        <img src="/icons/hardware-bg-1.png" class="w-full h-full absolute top-0 right-0 object-cover z-10">
 
         <!-- top, left -->
-        <img src="/icons/hardware-bg-2.png" class="absolute -top-11 -left-28 object-cover z-10">
+        <img src="/icons/hardware-bg-2.png" class="absolute -top-11 -left-28 object-cover z-10 hidden lg:block">
 
         <div class="px-10 pt-60 relative z-20">
-            <div class="flex justify-between">
+            <div class="flex md:flex-row flex-col justify-between">
                 <div class="flex-1">
-                    <div class="flex items-end">
-                        <h1 class="w-fit text-7xl text-center font-jetBrains leading-tight"
+                    <div class="flex mb-6 items-end">
+                        <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                             Hardware
                         </h1>
-                        <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
+                        <div class="mb-2 ml-2">
+                            <div class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="flex-1 flex flex-col space-y-10">
-                    <p class="font-inter font-normal text-lg"
+                    <p class="font-inter font-normal lg:text-lg sm:text-base text-sm"
                         :class="[getMode ? 'text-m_gray-300' : 'text-m_gray-500']">
                         We provide IT Services, Website Development, Branding, Logo Design. Our team consists of
                         experienced IT professionals, programmers and designers. Our business principles are the
@@ -30,7 +32,7 @@
                         successful projects of our clients.
                     </p>
                     <div class="flex items-center flex-wrap">
-                        <p class="font-jetBrains font-normal px-10 py-3 mr-4 mb-4 text-sm"
+                        <p class="font-jetBrains font-normal lg:px-10 lg:py-3 px-6 py-2 mr-4 mb-4 lg:text-sm text-xs"
                             :class="[getMode ? 'bg-m_amber-100 text-white' : 'bg-m_gray-400 text-m_blue-100']"
                             v-for="item in items" :key="item.id">
                             {{ item.name }}
@@ -39,23 +41,21 @@
                 </div>
             </div>
             <div class="flex flex-col mt-52">
-                <div class="flex flex-row items-center border-t-2 border-t-m_gray-500 py-10" v-for="item in hardware"
-                    :key="item.id">
-                    <div class="w-full mr-10 flex flex-col space-y-8">
+                <div class="flex flex-row items-center border-t-2 border-t-m_gray-500 py-10" v-for="item in hardware" :key="item.id">
+                    <div class="w-full sm:mr-10 flex flex-col space-y-8">
                         <div class="flex flex-row">
-                            <p class="font-inter font-normal text-base text-m_orange-100" v-for="i in item.cats"
-                                :key="i">{{ i }}</p>
+                            <p class="font-inter font-normal lg:text-base sm:text-sm text-xs text-m_orange-100" v-for="i in item.cats" :key="i">{{ i }}</p>
                         </div>
-                        <h3 class="font-rajdhani font-medium text-4xl" :class="[getMode ? 'text-white' : 'text-black']">
+                        <h3 class="font-rajdhani font-medium lg:text-4xl md:text-3xl text-2xl" :class="[getMode ? 'text-white' : 'text-black']">
                             {{ item.name }}</h3>
-                        <p class="font-inter font-normal text-lg text-m_gray-300">{{ item.desc }}</p>
+                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">{{ item.desc }}</p>
                     </div>
-                    <div class="w-[580px] h-80">
+                    <div class="w-[580px] h-80 hidden md:block">
                         <img class="w-full h-full object-cover" :src="item.img">
                     </div>
                 </div>
-                <div class=" text-center">
-                    <button class="px-20 py-5 border border-m_gray-300 text-m_gray-300 my-16">See all</button>
+                <div class="text-center">
+                    <button class="lg:px-20 lg:py-5 px-14 py-4 border border-m_gray-300 text-m_gray-300 my-16">See all</button>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Let Us Make Your Vision a Reality
                     </h1>
-                    <div class="w-fit mb-3 hidden md:block">
+                    <div class="mb-3 hidden md:block">
                         <div class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce"></div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         What We Do
                     </h1>
-                    <div class="w-fit mb-2 ml-2">
+                    <div class="mb-2 ml-2">
                         <div class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce"></div>
                     </div>
                 </div>
