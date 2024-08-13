@@ -16,7 +16,10 @@
             </div>
         </div>
         <div class="relative z-20" :class="[getMode ? 'bg-black' : 'bg-white']">
-            <img class="lw-full h-full xl:object-cover object-contain xl:top-0 lg:-top-[280px] absolute -z-10" src="/icons/line.png">
+            <img class="w-full h-full xl:object-cover object-contain xl:top-0 lg:-top-[280px] absolute -z-10" src="/icons/line.png">
+            <div class="w-full h-full xl:top-0 lg:-top-[280px] absolute -z-10">
+                <Background2 />
+            </div>
             <div class="w-full flex items-center justify-center xl:pt-72 xl:pb-60 lg:pt-60 lg:pb-52 py-20">
                 <div class="flex items-end">
                     <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
@@ -52,12 +55,14 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Background from '@/components/Background.vue';
+import Background2 from '@/components/Background2.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default {
     name: "Home",
     components: {
         Navbar,
         Background,
+        Background2
     },
     data() {
         return {
