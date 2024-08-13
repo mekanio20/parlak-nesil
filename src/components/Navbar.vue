@@ -1,7 +1,6 @@
 <template>
     <nav class="">
-        <div class="w-full flex items-center justify-between xl:px-10 p-5 fixed top-0 left-0 right-0 z-50"
-            :class="[getMode ? 'bg-gray-800 bg-opacity-75' : 'bg-slate-300 bg-opacity-75']">
+        <div class="w-full flex items-center justify-between xl:px-10 p-5 fixed top-0 left-0 right-0 z-50">
             <div class="flex items-center">
                 <router-link to="/" class="xl:w-72 sm:w-60 w-52">
                     <img :src="[getMode ? '/icons/logo-white.png' : '/icons/logo.png']">

@@ -20,7 +20,8 @@
 
         <div class="px-10 py-56 relative z-20">
             <div class="flex flex-col items-start space-y-6 sm:ml-10">
-                <h3 class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_orange-100 uppercase">About us</h3>
+                <h3 class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_orange-100 uppercase">About
+                    us</h3>
                 <h2 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold stroke-text uppercase"
                     :class="[getMode ? 'stroke-text' : 'stroke-text-black']">
                     We make your
@@ -41,30 +42,31 @@
             <div class="pt-20 flex flex-col items-center justify-center">
                 <img src="/icons/parlak-nesil.png" class="object-cover lg:w-52 sm:w-40 w-32">
             </div>
+
             <div class="flex flex-col items-center">
-                <h4 class="my-28 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase" :class="[getMode ? 'text-white' : 'text-black']">Our team</h4>
-                <div class="flex flex-col">
-                    <div class="w-full h-96 py-10 flex items-center justify-between border-m_gray-500 border-t overflow-hidden"
-                        v-for="item in teams" :key="item.id" :id="item.id">
-                        <div class="flex-1">
-                            <div class="font-rajdhani font-medium lg:text-[350px] md:text-[300px] text-[200px]" :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.id }}</div>
-                        </div>
-                        <div class="sm:flex-1 px-4 flex flex-col">
-                            <h3 class="font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase sm:mb-8 mb-4" :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.name }}
-                            </h3>
-                            <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">
-                                {{ item.desc }}
-                            </p>
-                        </div>
-                        <div class="flex-2 sm:ml-20 mt-4 self-start">
-                            <div class="lg:px-[22px] lg:py-7 px-[16px] py-[22px] lg:border-[2px] border rounded-full cursor-pointer" :claas="[!getMode ? 'border-black' : 'border-white']" @click="openAccordion(item.id)">
-                                <div class="w-3 h-[1px]" :class="[getMode ? 'bg-white' : 'bg-m_blue-100']"></div>
-                            </div>
-                        </div>
+                <h4 class="my-28 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase"
+                    :class="[getMode ? 'text-white' : 'text-black']">Our team</h4>
+
+                <div class="w-full flex flex-row items-start justify-between border-m_gray-500 border-t px-4 py-4 overflow-hidden"
+                    v-for="(item, index) in teams" :key="item.id" :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 h-52'">
+                    <div class="leading-none font-rajdhani font-medium lg:text-[350px] md:text-[300px] text-[200px]"
+                        :class="[getMode ? 'text-white' : 'text-m_blue-100']">0{{ item.id }}</div>
+                    <div class="flex flex-col space-y-4 mt-3 w-[450px] duration-500" :class="activeIndex === index ? 'pt-10' : ' pt-24'">
+                        <h3 class="font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase mb-8"
+                            :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.name }}</h3>
+                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">
+                            {{ item.desc }}
+                        </p>
+                    </div>
+                    <div class="mt-10">
+                        <button class="rounded-full flex items-center justify-center px-6 py-4 border-m_gray-500 border" @click="toggleAccordion(index)">
+                            <span class="text-xl text-m_gray-500">{{ activeIndex === index ? '-' : '+' }}</span>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="mt-20 flex sm:flex-row flex-col items-center space-x-6 space-y-6">
+
+            <div class="mt-20 flex items-center space-x-6">
                 <div class="flex-1">
                     <img class="object-cover" src="/imgs/team-1.png">
                 </div>
@@ -84,11 +86,12 @@ export default {
     name: "About",
     data() {
         return {
+            activeIndex: 0,
             teams: [
-                { id: 1, name: 'Hardware', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
-                { id: 2, name: 'Networking', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
-                { id: 3, name: 'Front-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
-                { id: 4, name: 'Back-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
+                { id: 1, name: 'Hardware', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 2, name: 'Networking', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 3, name: 'Front-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 4, name: 'Back-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
             ]
         }
     },
@@ -96,14 +99,9 @@ export default {
         Navbar
     },
     methods: {
-        openAccordion(id) {
-            const elem = document.getElementById(id)
-            if (elem.style.height == '200px') {
-                elem.style.height = '384px'
-            } else {
-                elem.style.height = '200px'
-            }
-        }
+        toggleAccordion(index) {
+            this.activeIndex = this.activeIndex === index ? null : index;
+        },
     },
     computed: {
         ...mapGetters(['getMode']),

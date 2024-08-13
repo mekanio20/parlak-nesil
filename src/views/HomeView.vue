@@ -4,12 +4,12 @@
         <Background />
         <div class="lg:h-screen h-[70vh] relative z-20">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit sm:w-2/3 w-full px-6">
-                <div class="flex items-end space-x-2">
-                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight animate__animated animate__fadeIn"
+                <div class="flex items-end space-x-2 xl:w-[750px] lg:w-[600px] md:w-[500px]">
+                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center !leading-normal font-jetBrains animate__animated animate__fadeIn"
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Let Us Make Your Vision a Reality
                     </h1>
-                    <div class="mb-3 hidden md:block">
+                    <div class="md:mb-6 mb-4">
                         <div class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce"></div>
                     </div>
                 </div>
@@ -62,11 +62,11 @@ export default {
     data() {
         return {
             items: [
-                { id: 1, icon: '/icons/komp.png', title: 'Development of websites of any complexity', subtitle: 'Business card sites / E-commerce / LMS / CRM' },
-                { id: 2, icon: '/icons/phone.png', title: 'Mobile application development', subtitle: 'Android & IOS' },
-                { id: 3, icon: '/icons/pen.png', title: 'UI / UX design of applications', subtitle: 'Websites and mobile applications' },
-                { id: 4, icon: '/icons/cpu.png', title: 'Full range of hardware solutions', subtitle: 'Servers / Networking equipment / Computers' },
-                { id: 5, icon: '/icons/phone.png', title: 'Mobile application development', subtitle: 'Android & IOS' },
+                { id: 4, icon: '/svg/cpu.svg', title: 'Full range of hardware solutions', subtitle: 'Servers / Networking equipment / Computers' },
+                { id: 1, icon: '/svg/komp.svg', title: 'Development of websites of any complexity', subtitle: 'Business card sites / E-commerce / LMS / CRM' },
+                { id: 2, icon: '/svg/phone.svg', title: 'Mobile application development', subtitle: 'Android & IOS' },
+                { id: 3, icon: '/svg/pen.svg', title: 'UI / UX design of applications', subtitle: 'Websites and mobile applications' },
+                { id: 5, icon: '/svg/phone.svg', title: 'Mobile application development', subtitle: 'Android & IOS' },
             ]
         }
     },

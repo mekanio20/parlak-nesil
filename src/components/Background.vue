@@ -1,69 +1,81 @@
 <template>
     <div class="w-full h-full fixed z-10">
-        <svg class="w-full h-full object-cover" viewBox="0 0 1918 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="getMode" width="100%" height="100%" viewBox="0 0 1920 1080" fill="none"
+            xmlns="http://www.w3.org/2000/svg" class="svg-container">
+            <g class="svg-group" filter="url(#filter0_d_963_1455)">
+                <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M493.036 -501L1964.42 154.063L1859.03 390.804L1661.57 834.318L1424.83 728.921L426.927 284.652L118.74 976.894L-118.001 871.497L190.186 179.255L190.185 179.254L295.582 -57.4861L1530.23 492.18L1622.29 285.406L387.638 -264.259L493.036 -501ZM321.02 1066.95L544.488 564.997L781.229 670.394L1406.04 948.563L1576.86 1024.61L1353.39 1526.56L1116.65 1421.16L1234.72 1155.95L675.832 907.135L557.761 1172.34L321.02 1066.95Z"
+                    fill="black"></path>
+            </g>
             <defs>
-                <!-- Glow Filter Definition -->
-                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blurred" />
-                    <feFlood flood-color="#FF630D" result="color" />
-                    <feComposite in="color" in2="blurred" operator="in" result="coloredBlur" />
-                    <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
+                <filter id="filter0_d_963_1455" x="-186.3" y="-565.3" width="2219.02" height="2164.16"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"></feColorMatrix>
+                    <feOffset dy="4"></feOffset>
+                    <feGaussianBlur stdDeviation="34.15"></feGaussianBlur>
+                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.0509804 0 0 0 1 0">
+                    </feColorMatrix>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_963_1455"></feBlend>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_963_1455" result="shape">
+                    </feBlend>
                 </filter>
             </defs>
+        </svg>
+        <svg v-if="!getMode" width="100%" height="100%" viewBox="0 0 1918 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-inside-1_963_1432" fill="white">
-                <path
+                <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M446.035 -730L1917.42 -74.937L1812.03 161.804L1614.57 605.317L1377.83 499.92L379.926 55.6517L71.7396 747.894L-165.001 642.497L143.186 -49.7454L143.185 -49.7455L248.583 -286.486L1483.23 263.179L1575.28 56.4062L340.638 -493.259L446.035 -730ZM274.02 837.947L497.488 335.997L734.229 441.394L1359.04 719.563L1529.86 795.609L1306.39 1297.56L1069.65 1192.16L1187.72 926.952L628.831 678.135L510.76 943.344L274.02 837.947Z" />
             </mask>
-            <path
+            <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M446.035 -730L1917.42 -74.937L1812.03 161.804L1614.57 605.317L1377.83 499.92L379.926 55.6517L71.7396 747.894L-165.001 642.497L143.186 -49.7454L143.185 -49.7455L248.583 -286.486L1483.23 263.179L1575.28 56.4062L340.638 -493.259L446.035 -730ZM274.02 837.947L497.488 335.997L734.229 441.394L1359.04 719.563L1529.86 795.609L1306.39 1297.56L1069.65 1192.16L1187.72 926.952L628.831 678.135L510.76 943.344L274.02 837.947Z"
-                stroke="#FF630D" stroke-width="4" fill="none" filter="url(#glow)" mask="url(#path-1-inside-1_963_1432)"
-                class="transition-opacity duration-1000 ease-in opacity-0 animated-path" />
+                fill="#FDFDFD" />
+            <path
+                d="M1917.42 -74.937L1920.16 -73.7169L1921.38 -76.4576L1918.64 -77.6777L1917.42 -74.937ZM446.035 -730L447.255 -732.741L444.515 -733.961L443.294 -731.22L446.035 -730ZM1812.03 161.804L1814.77 163.024L1812.03 161.804ZM1614.57 605.317L1613.35 608.058L1616.09 609.278L1617.31 606.538L1614.57 605.317ZM1377.83 499.92L1376.61 502.661L1377.83 499.92ZM379.926 55.6517L381.146 52.911L378.406 51.6909L377.186 54.4316L379.926 55.6517ZM71.7396 747.894L70.5194 750.634L73.2601 751.855L74.4802 749.114L71.7396 747.894ZM-165.001 642.497L-167.742 641.276L-168.962 644.017L-166.221 645.237L-165.001 642.497ZM143.186 -49.7454L145.926 -48.5252L147.146 -51.2659L144.406 -52.4861L143.186 -49.7454ZM143.185 -49.7455L140.445 -50.9656L139.225 -48.2249L141.965 -47.0048L143.185 -49.7455ZM248.583 -286.486L249.803 -289.227L247.062 -290.447L245.842 -287.706L248.583 -286.486ZM1483.23 263.179L1482.01 265.92L1484.75 267.14L1485.97 264.4L1483.23 263.179ZM1575.28 56.4062L1578.03 57.6264L1579.25 54.8857L1576.5 53.6655L1575.28 56.4062ZM340.638 -493.259L337.897 -494.48L336.677 -491.739L339.418 -490.519L340.638 -493.259ZM497.488 335.997L498.708 333.257L495.967 332.036L494.747 334.777L497.488 335.997ZM274.02 837.947L271.279 836.727L270.059 839.468L272.799 840.688L274.02 837.947ZM734.229 441.394L735.449 438.654L734.229 441.394ZM1359.04 719.563L1360.26 716.822L1359.04 719.563ZM1529.86 795.609L1532.6 796.829L1533.82 794.088L1531.08 792.868L1529.86 795.609ZM1306.39 1297.56L1305.17 1300.3L1307.91 1301.52L1309.13 1298.78L1306.39 1297.56ZM1069.65 1192.16L1066.91 1190.94L1065.69 1193.68L1068.43 1194.9L1069.65 1192.16ZM1187.72 926.952L1190.46 928.172L1191.68 925.432L1188.94 924.212L1187.72 926.952ZM628.831 678.135L630.052 675.394L627.311 674.174L626.091 676.915L628.831 678.135ZM510.76 943.344L509.54 946.085L512.281 947.305L513.501 944.564L510.76 943.344ZM1918.64 -77.6777L447.255 -732.741L444.815 -727.259L1916.2 -72.1964L1918.64 -77.6777ZM1814.77 163.024L1920.16 -73.7169L1914.68 -76.1572L1809.29 160.583L1814.77 163.024ZM1617.31 606.538L1814.77 163.024L1809.29 160.583L1611.83 604.097L1617.31 606.538ZM1376.61 502.661L1613.35 608.058L1615.79 602.577L1379.05 497.18L1376.61 502.661ZM1379.05 497.18L381.146 52.911L378.706 58.3924L1376.61 502.661L1379.05 497.18ZM377.186 54.4316L68.9989 746.674L74.4802 749.114L382.667 56.8719L377.186 54.4316ZM72.9597 745.153L-163.781 639.756L-166.221 645.237L70.5194 750.634L72.9597 745.153ZM-162.26 643.717L145.926 -48.5252L140.445 -50.9655L-167.742 641.276L-162.26 643.717ZM144.406 -52.4861L144.406 -52.4861L141.965 -47.0048L141.965 -47.0047L144.406 -52.4861ZM145.926 -48.5253L251.323 -285.266L245.842 -287.706L140.445 -50.9656L145.926 -48.5253ZM247.362 -283.745L1482.01 265.92L1484.45 260.439L249.803 -289.227L247.362 -283.745ZM1572.54 55.1861L1480.49 261.959L1485.97 264.4L1578.03 57.6264L1572.54 55.1861ZM339.418 -490.519L1574.06 59.1469L1576.5 53.6655L341.858 -496L339.418 -490.519ZM443.294 -731.22L337.897 -494.48L343.379 -492.039L448.776 -728.78L443.294 -731.22ZM494.747 334.777L271.279 836.727L276.76 839.167L500.229 337.217L494.747 334.777ZM735.449 438.654L498.708 333.257L496.268 338.738L733.008 444.135L735.449 438.654ZM1360.26 716.822L735.449 438.654L733.008 444.135L1357.82 722.304L1360.26 716.822ZM1531.08 792.868L1360.26 716.822L1357.82 722.304L1528.64 798.35L1531.08 792.868ZM1309.13 1298.78L1532.6 796.829L1527.12 794.389L1303.65 1296.34L1309.13 1298.78ZM1068.43 1194.9L1305.17 1300.3L1307.61 1294.82L1070.87 1189.42L1068.43 1194.9ZM1184.98 925.732L1066.91 1190.94L1072.39 1193.38L1190.46 928.172L1184.98 925.732ZM627.611 680.876L1186.5 929.693L1188.94 924.212L630.052 675.394L627.611 680.876ZM513.501 944.564L631.572 679.355L626.091 676.915L508.019 942.124L513.501 944.564ZM272.799 840.688L509.54 946.085L511.98 940.604L275.24 835.206L272.799 840.688Z"
+                fill="#FF630D" fill-opacity="0.1" mask="url(#path-1-inside-1_963_1432)" />
         </svg>
+
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
     name: "Background",
     mounted() {
-        this.animatePath();
+        this.animateSVG();
     },
     methods: {
-        animatePath() {
-            const pathElement = this.$el.querySelector('.animated-path');
-            pathElement.style.opacity = 0;
+        animateSVG() {
+            const svgPath = this.$el.querySelector(".svg-path");
+            const svgGroup = this.$el.querySelector(".svg-group");
+            svgPath.style.transition = "opacity 3s ease, fill 3s ease";
+            svgGroup.style.transition = "opacity 3s ease";
+            svgPath.style.opacity = 0;
+            svgGroup.style.opacity = 0;
             setTimeout(() => {
-                pathElement.style.opacity = 1;
+                svgPath.style.opacity = 1;
+                svgGroup.style.opacity = 1;
+                svgPath.style.fill = "#000000";
             }, 200);
-        }
+        },
+    },
+    computed: {
+        ...mapGetters(['getMode']),
     }
 };
 </script>
 
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom glow effect */
-.animated-path {
-    animation: glow-animation 2s ease-in-out infinite;
+<style scoped>
+.svg-container {
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes glow-animation {
-    0% {
-        filter: brightness(1.2) blur(1px);
-    }
-
-    50% {
-        filter: brightness(1.8) blur(3px);
-    }
-
-    100% {
-        filter: brightness(1.2) blur(1px);
-    }
+.svg-path,
+.svg-group {
+    opacity: 0;
 }
 </style>
