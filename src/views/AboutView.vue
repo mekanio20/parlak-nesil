@@ -24,13 +24,12 @@
                     v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">About us</h3>
                 <h2 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold stroke-text uppercase"
                     :class="[getMode ? 'stroke-text' : 'stroke-text-black']"
-                    v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                    v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
                     We make your
                 </h2>
                 <div class="flex items-end">
                     <h1 class="font-rajdhani font-bold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl uppercase"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100']"
-                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                        :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Vision a reality
                     </h1>
                     <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
@@ -77,14 +76,15 @@
             </div>
 
             <div class="mt-20 flex items-center space-x-6">
-                <div class="flex-1" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
-                    <img class="object-cover" src="/imgs/team-1.png">
+                <div class="flex-1">
+                    <img class="object-cover" v-lazy="'/imgs/team-1.png'" lazy="loading"
+                        v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 100 }">
                 </div>
                 <div class="flex-1 flex flex-col space-y-6">
-                    <img class="object-cover" src="/imgs/team-2.png"
-                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-                    <img class="object-cover" src="/imgs/team-3.png"
+                    <img class="object-cover" v-lazy="'/imgs/team-2.png'" lazy="loading"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000, delay: 200 }">
+                    <img class="object-cover" v-lazy="'/imgs/team-3.png'" lazy="loading"
+                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000, delay: 300 }">
                 </div>
             </div>
         </div>

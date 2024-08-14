@@ -3,7 +3,7 @@
         <Navbar link="Home" />
         <Background />
         <div class="lg:h-screen h-[70vh] relative z-20">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit sm:w-2/3 w-full px-6">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit sm:w-[420px] w-[370px] px-6">
                 <div class="flex items-end space-x-2 xl:w-[750px] lg:w-[600px] md:w-[500px]">
                     <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center !leading-normal font-jetBrains animate__animated animate__fadeIn"
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
@@ -16,9 +16,8 @@
             </div>
         </div>
         <div class="relative z-20" :class="[getMode ? 'bg-black' : 'bg-white']">
-            <img class="w-full h-full xl:object-cover object-contain xl:top-0 lg:-top-[280px] absolute -z-10" src="/icons/line.png">
-            <div class="w-full h-full xl:top-0 lg:-top-[280px] absolute -z-10">
-                <Background2 />
+            <div class="w-full h-fit absolute -z-10">
+                <SvgAnimation />
             </div>
             <div class="w-full flex items-center justify-center xl:pt-72 xl:pb-60 lg:pt-60 lg:pb-52 py-20">
                 <div class="flex items-end">
@@ -55,14 +54,14 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Background from '@/components/Background.vue';
-import Background2 from '@/components/Background2.vue';
+import SvgAnimation from '@/components/SvgAnimation.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default {
     name: "Home",
     components: {
         Navbar,
         Background,
-        Background2
+        SvgAnimation
     },
     data() {
         return {
