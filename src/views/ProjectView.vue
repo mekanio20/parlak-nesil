@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="lg:columns-3 sm:columns-2 columns-1 gap-8 pb-20">
-                <div v-for="(item, index) in projects" :key="index" class="w-full mb-10 overflow-hidden">
+                <div v-for="(item, index) in projects" :key="index" v-scroll-reveal="{ origin: 'top', distance: '100px', duration: 1000 }" class="w-full mb-10 overflow-hidden">
                     <router-link :to="`/project/${item.id}`">
                         <img class="w-full object-cover mb-3" v-lazy="item.img" lazy="loading" />
                         <h3 class="font-semibold font-rajdhani lg:text-2xl sm:text-xl text-lg"

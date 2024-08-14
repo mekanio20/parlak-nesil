@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full fixed z-10">
+    <div class="w-full h-full fixed sm:top-0 -top-24 z-10">
         <svg v-if="getMode" width="100%" height="100%" viewBox="0 0 1920 1080" fill="none"
             xmlns="http://www.w3.org/2000/svg" class="svg-container">
             <g class="svg-group" filter="url(#filter0_d_963_1455)">

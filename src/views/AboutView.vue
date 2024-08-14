@@ -20,46 +20,56 @@
 
         <div class="px-10 py-56 relative z-20">
             <div class="flex flex-col items-start space-y-6 sm:ml-10">
-                <h3 class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_orange-100 uppercase">About
-                    us</h3>
+                <h3 class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_orange-100 uppercase"
+                    v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">About us</h3>
                 <h2 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold stroke-text uppercase"
-                    :class="[getMode ? 'stroke-text' : 'stroke-text-black']">
+                    :class="[getMode ? 'stroke-text' : 'stroke-text-black']"
+                    v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                     We make your
                 </h2>
                 <div class="flex items-end">
                     <h1 class="font-rajdhani font-bold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl uppercase"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100']">
+                        :class="[getMode ? 'text-white' : 'text-m_blue-100']"
+                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                         Vision a reality
                     </h1>
                     <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
                 </div>
-                <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300 md:w-1/2 w-full">
+                <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300 md:w-1/2 w-full"
+                    v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
                     Parlak Nesil is a multi-disciplinary design studio. Studio creates brand identities and develops
                     strategies. We are engaged in finding the optimal solutions covering all spheres of design spectrum
                     by using a unique approach.
                 </p>
             </div>
-            <div class="pt-20 flex flex-col items-center justify-center">
+            <div class="pt-20 flex flex-col items-center justify-center"
+                v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
                 <img src="/icons/parlak-nesil.png" class="object-cover lg:w-52 sm:w-40 w-32">
             </div>
 
             <div class="flex flex-col items-center">
                 <h4 class="my-28 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase"
-                    :class="[getMode ? 'text-white' : 'text-black']">Our team</h4>
+                    :class="[getMode ? 'text-white' : 'text-black']"
+                    v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">Our team</h4>
 
                 <div class="w-full flex flex-row items-start justify-between border-m_gray-500 border-t px-4 py-4 overflow-hidden"
-                    v-for="(item, index) in teams" :key="item.id" :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 h-52'">
+                    v-for="(item, index) in teams" :key="item.id"
+                    :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 h-52'">
                     <div class="leading-none font-rajdhani font-medium lg:text-[350px] md:text-[300px] text-[200px]"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100']">0{{ item.id }}</div>
-                    <div class="flex flex-col space-y-4 mt-3 w-[450px] duration-500" :class="activeIndex === index ? 'pt-10' : ' pt-24'">
+                        :class="[getMode ? 'text-white' : 'text-m_blue-100']"
+                        v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">0{{ item.id }}</div>
+                    <div class="flex flex-col space-y-4 mt-3 w-[450px] duration-500"
+                        :class="activeIndex === index ? 'pt-10' : ' pt-24'"
+                        v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
                         <h3 class="font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase mb-8"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.name }}</h3>
                         <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">
                             {{ item.desc }}
                         </p>
                     </div>
-                    <div class="mt-10">
-                        <button class="rounded-full flex items-center justify-center px-6 py-4 border-m_gray-500 border" @click="toggleAccordion(index)">
+                    <div class="mt-10" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                        <button class="rounded-full flex items-center justify-center px-6 py-4 border-m_gray-500 border"
+                            @click="toggleAccordion(index)">
                             <span class="text-xl text-m_gray-500">{{ activeIndex === index ? '-' : '+' }}</span>
                         </button>
                     </div>
@@ -67,12 +77,14 @@
             </div>
 
             <div class="mt-20 flex items-center space-x-6">
-                <div class="flex-1">
+                <div class="flex-1" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
                     <img class="object-cover" src="/imgs/team-1.png">
                 </div>
                 <div class="flex-1 flex flex-col space-y-6">
-                    <img class="object-cover" src="/imgs/team-2.png">
-                    <img class="object-cover" src="/imgs/team-3.png">
+                    <img class="object-cover" src="/imgs/team-2.png"
+                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                    <img class="object-cover" src="/imgs/team-3.png"
+                        v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000, delay: 200 }">
                 </div>
             </div>
         </div>

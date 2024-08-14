@@ -12,7 +12,7 @@
                 <div class="flex-1">
                     <div class="flex mb-6 items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
-                            :class="[getMode ? 'text-white' : 'text-m_blue-100']">
+                            :class="[getMode ? 'text-white' : 'text-m_blue-100']" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
                             Hardware
                         </h1>
                         <div class="mb-2 ml-2">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="flex-1 flex flex-col space-y-10">
                     <p class="font-inter font-normal lg:text-lg sm:text-base text-sm"
-                        :class="[getMode ? 'text-m_gray-300' : 'text-m_gray-500']">
+                        :class="[getMode ? 'text-m_gray-300' : 'text-m_gray-500']" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                         We provide IT Services, Website Development, Branding, Logo Design. Our team consists of
                         experienced IT professionals, programmers and designers. Our business principles are the
                         provision of efficient and high-quality services, as well as a unique approach to each client.
@@ -34,7 +34,7 @@
                     <div class="flex items-center flex-wrap">
                         <p class="font-jetBrains font-normal lg:px-10 lg:py-3 px-6 py-2 mr-4 mb-4 lg:text-sm text-xs"
                             :class="[getMode ? 'bg-m_amber-100 text-white' : 'bg-m_gray-400 text-m_blue-100']"
-                            v-for="item in items" :key="item.id">
+                            v-for="item in items" :key="item.id" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000, delay: item.delay }">
                             {{ item.name }}
                         </p>
                     </div>
@@ -43,14 +43,14 @@
             <div class="flex flex-col mt-52">
                 <div class="flex flex-row items-center border-t-2 border-t-m_gray-500 py-10" v-for="item in hardware" :key="item.id">
                     <div class="w-full sm:mr-10 flex flex-col space-y-8">
-                        <div class="flex flex-row">
+                        <div class="flex flex-row" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 100 }">
                             <p class="font-inter font-normal lg:text-base sm:text-sm text-xs text-m_orange-100" v-for="i in item.cats" :key="i">{{ i }}</p>
                         </div>
-                        <h3 class="font-rajdhani font-medium lg:text-4xl md:text-3xl text-2xl" :class="[getMode ? 'text-white' : 'text-black']">
+                        <h3 class="font-rajdhani font-medium lg:text-4xl md:text-3xl text-2xl" :class="[getMode ? 'text-white' : 'text-black']" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 200 }">
                             {{ item.name }}</h3>
-                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">{{ item.desc }}</p>
+                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300" v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 300 }">{{ item.desc }}</p>
                     </div>
-                    <div class="w-[580px] h-80 hidden md:block">
+                    <div class="w-[580px] h-80 hidden md:block" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                         <img class="w-full h-full object-cover" :src="item.img">
                     </div>
                 </div>
@@ -70,23 +70,23 @@ export default {
     data() {
         return {
             items: [
-                { id: 1, name: 'Router' },
-                { id: 2, name: 'Computers' },
-                { id: 3, name: 'Switch' },
-                { id: 4, name: 'Archivers' },
-                { id: 5, name: 'IP Telephony' },
-                { id: 6, name: 'CISCO' },
-                { id: 7, name: 'DELL' },
-                { id: 8, name: 'Server' },
-                { id: 9, name: 'HP' },
-                { id: 10, name: 'Networking' },
+                { id: 1, name: 'Router', delay: 100 },
+                { id: 2, name: 'Computers', delay: 200 },
+                { id: 3, name: 'Switch', delay: 300 },
+                { id: 4, name: 'Archivers', delay: 400 },
+                { id: 5, name: 'IP Telephony', delay: 500 },
+                { id: 6, name: 'CISCO', delay: 600 },
+                { id: 7, name: 'DELL', delay: 700 },
+                { id: 8, name: 'Server', delay: 800 },
+                { id: 9, name: 'HP', delay: 900 },
+                { id: 10, name: 'Networking', delay: 1000 },
             ],
             hardware: [
-                { id: 1, img: '/imgs/project-1.png', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 2, img: '/imgs/project-2.png', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 3, img: '/imgs/project-3.png', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 4, img: '/imgs/project-4.png', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 5, img: '/imgs/project-5.png', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' }
+                { id: 1, img: '/imgs/project-1.webp', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 2, img: '/imgs/project-2.webp', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 3, img: '/imgs/project-3.webp', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 4, img: '/imgs/project-4.webp', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 5, img: '/imgs/project-5.webp', name: 'Ministry of construction and architecture of turkmenistan', cats: ['Computers /', 'Server /', 'Printers /', 'Switch'], desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' }
             ]
         }
     },
