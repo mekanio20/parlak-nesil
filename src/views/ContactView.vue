@@ -10,7 +10,7 @@
                     <div class="flex items-end">
                         <h1 class="w-fit text-7xl text-center font-jetBrains leading-tight"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']">
-                            Contac us
+                            Contact us
                         </h1>
                         <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
                     </div>

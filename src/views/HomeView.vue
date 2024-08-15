@@ -45,9 +45,10 @@
                 </div>
             </div>
         </div>
-        <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer" @click="changeMode">
+        <ChangeButton />
+        <!-- <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer" @click="changeMode">
             <img class="lg:w-16 w-14" src="/icons/mode.png">
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -55,13 +56,15 @@
 import Navbar from '@/components/Navbar.vue';
 import Background from '@/components/Background.vue';
 import SvgAnimation from '@/components/SvgAnimation.vue';
+import ChangeButton from '@/components/ChangeButton.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default {
     name: "Home",
     components: {
         Navbar,
         Background,
-        SvgAnimation
+        SvgAnimation,
+        ChangeButton
     },
     data() {
         return {
@@ -73,9 +76,6 @@ export default {
                 { id: 5, icon: '/svg/phone.svg', title: 'Mobile application development', subtitle: 'Android & IOS', animate: 'right' },
             ]
         }
-    },
-    methods: {
-        ...mapActions(['changeMode']),
     },
     computed: {
         ...mapGetters(['getMode']),

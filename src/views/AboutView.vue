@@ -22,7 +22,7 @@
             <div class="flex flex-col items-start space-y-6">
                 <h3 class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_orange-100 uppercase"
                     v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">About us</h3>
-                <h2 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold stroke-text uppercase"
+                <h2 class="font-rajdhani xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold stroke-text uppercase"
                     :class="[getMode ? 'stroke-text' : 'stroke-text-black']"
                     v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
                     We make your

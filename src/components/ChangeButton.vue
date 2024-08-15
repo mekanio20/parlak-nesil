@@ -1,9 +1,10 @@
 <template>
-    <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer">
-        <input type="checkbox" id="darkmode-toggle" />
+    <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer" @click.stop="updateMode">
+        <input type="checkbox" id="darkmode-toggle" checked />
         <label for="darkmode-toggle">
-            <svg width="30px" height="30px" version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
+            <svg width="30px" height="30px" version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496"
+                style="enable-background:new 0 0 496 496;" xml:space="preserve">
 
                 <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)"
                     width="40.001" height="16" />
@@ -57,8 +58,23 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
-    name: "Test"
+    name: "ChangeButton",
+    data() {
+        return {
+            clicked: 0
+        }
+    },
+    methods: {
+        ...mapActions(['changeMode']),
+        updateMode() {
+            this.clicked++
+            if (this.clicked % 2 === 0) {
+                this.changeMode()
+            }
+        }
+    },
 }
 </script>
 
@@ -85,7 +101,6 @@ label {
     height: 75px;
     position: relative;
     display: block;
-    /* background: #ebebeb; */
     border-radius: 200px;
     box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
@@ -131,10 +146,6 @@ input {
     visibility: hidden;
 }
 
-input:checked+label {
-    background: #242424;
-}
-
 input:checked+label:after {
     left: 130px;
     transform: translateX(-100%);
@@ -150,7 +161,7 @@ input:checked+label svg.moon {
 }
 
 input:checked+.background {
-    background: #242424;
+    background: #d7d7d7;
 }
 
 input:active:after {
