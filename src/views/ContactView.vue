@@ -4,7 +4,7 @@
         <!-- contact bg -->
         <img src="/icons/contact-bg.png" class="w-full h-full  absolute top-0 left-0 right-0 z-10">
 
-        <div class="px-10 py-56 relative z-20">
+        <div class="container py-56 relative z-20">
             <div class="flex items-center justify-between">
                 <div class="flex flex-col items-start justify-between">
                     <div class="flex items-end">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="py-10 border-t border-m_gray-500">
-            <div class="px-10 flex items-center justify-between">
+            <div class="container flex items-center justify-between">
                 <div class="flex flex-col items-center">
                     <p class="mb-4 font-rajdhani font-medium text-xl text-m_gray-600 uppercase">Call</p>
                     <p class="font-rajdhani font-medium text-2xl text-m_gray-700">+993 62 410579</p>

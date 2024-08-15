@@ -7,7 +7,7 @@
         <!-- top, left -->
         <img src="/icons/hardware-bg-2.png" class="absolute -top-11 -left-28 object-cover z-10 hidden lg:block">
 
-        <div class="px-10 pt-60 relative z-20">
+        <div class="container pt-60 relative z-20">
             <div class="flex md:flex-row flex-col justify-between">
                 <div class="flex-1">
                     <div class="flex mb-6 items-end">

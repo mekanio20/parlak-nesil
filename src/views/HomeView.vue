@@ -15,11 +15,11 @@
                 </div>
             </div>
         </div>
-        <div class="relative z-20" :class="[getMode ? 'bg-black' : 'bg-white']">
+        <div class="w-full tv:min-h-[2400px] relative z-20" :class="[getMode ? 'bg-black' : 'bg-white']">
             <div class="w-full h-fit absolute -z-10">
                 <SvgAnimation />
             </div>
-            <div class="w-full flex items-center justify-center xl:pt-72 xl:pb-60 lg:pt-60 lg:pb-52 py-20">
+            <div class="w-full h-full container flex items-center justify-center xl:pt-72 xl:pb-60 lg:pt-60 lg:pb-52 py-20">
                 <div class="flex items-end">
                     <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']" v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center justify-center flex-wrap">
+            <div class="container flex items-center justify-center flex-wrap">
                 <div class="flex items-center flex-col px-12 py-10 mr-10 mb-10 space-y-8 w-96 h-80 rounded-tl-3xl rounded-br-3xl relative"
                     :class="[getMode ? 'bg-m_amber-100' : 'bg-gray-100']" v-for="item in items" :key="item.id" v-scroll-reveal="{ origin: item.animate, distance: '50px', duration: 1000 }">
                     <img class="sm:w-14 w-12 object-cover" :src="item.icon">

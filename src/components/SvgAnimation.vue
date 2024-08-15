@@ -2,7 +2,7 @@
     <div class="w-full h-full">
         <svg width="100%" height="100%" viewBox="0 0 1920 1590" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path v-for="(path, index) in paths" :opacity="path.opacity" :d="path.d" :stroke="path.stroke"
-                :stroke-opacity="path.stroke_opacity" :stroke-width="path.stroke_width" :style="{ opacity: 0 }"
+                :stroke-opacity="path.stroke_opacity" :stroke-width="path.stroke_width" :style="{ display: 'none' }"
                 :key="index" ref="paths"></path>
         </svg>
     </div>
@@ -419,7 +419,7 @@ export default {
                     stroke_with: "2",
                 },
             ]
-        };
+        }
     },
     mounted() {
         this.animatePaths();
@@ -428,11 +428,10 @@ export default {
         animatePaths() {
             this.$refs.paths.forEach((path, index) => {
                 setTimeout(() => {
-                    path.style.opacity = 1;
-                    path.style.transition = "opacity 0.5s ease-in-out";
-                }, index * 100);
-            });
-        },
-    },
-};
+                    path.style.display = 'block'
+                }, index * 100)
+            })
+        }
+    }
+}
 </script>

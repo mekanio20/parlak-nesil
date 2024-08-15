@@ -1,7 +1,7 @@
 <template>
     <div class="relative min-h-screen overflow-hidden" :class="[getMode ? 'bg-black' : 'bg-white']">
         <Navbar link="Project" />
-        <div class="px-10 py-40 relative z-20">
+        <div class="container py-40 relative z-20">
             <div class="flex items-center">
                 <div class="flex-1 flex flex-col space-y-6">
                     <img class="w-full object-cover" src="/imgs/project-6.webp">

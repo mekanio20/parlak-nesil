@@ -4,7 +4,7 @@
         <!-- top, right -->
         <img src="/icons/project-bg.png" class="w-full h-full absolute z-10 top-0 right-0">
 
-        <div class="px-10 relative z-20">
+        <div class="container relative z-20">
             <div class="flex items-center justify-center pt-60 pb-40">
                 <div class="flex items-end">
                     <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight"

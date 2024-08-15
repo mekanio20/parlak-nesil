@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        tv: '1600px'
+      },
       colors: {
         m_blue: {
           100: "#093747"
@@ -37,7 +40,7 @@ export default {
     },
     container: {
       center: true,
-      padding: '2rem',
+      padding: '10px',
       screens: {
         sm: '640px',
         md: '768px',
