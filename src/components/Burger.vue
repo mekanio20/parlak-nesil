@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'SvgBurgerToX',
+    name: 'Burger',
     data() {
         return {
             isOpen: false,

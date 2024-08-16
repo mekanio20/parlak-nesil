@@ -33,7 +33,7 @@
                     <p class="font-rajdhani font-medium text-2xl text-m_gray-700">+993 62 410579</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <p class="mb-4 font-rajdhani font-medium text-xl text-m_gray-600 uppercase">Our Adddress</p>
+                    <p class="mb-4 font-rajdhani font-medium text-xl text-m_gray-600 uppercase">Our Address</p>
                     <p class="font-rajdhani font-medium text-2xl text-m_gray-700">Aşgabat ş. Bitarap Türkmenistan şaýoly, 163</p>
                 </div>
                 <div class="flex flex-col items-center">

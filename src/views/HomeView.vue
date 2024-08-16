@@ -5,7 +5,7 @@
         <div class="lg:h-screen h-[70vh] relative z-20">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit sm:w-[420px] w-[370px] px-6">
                 <div class="flex items-end space-x-2 xl:w-[750px] lg:w-[600px] md:w-[500px]">
-                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center !leading-normal font-jetBrains animate__animated animate__fadeIn"
+                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center !leading-normal font-jetBrains select-none animate__animated animate__fadeIn"
                         :class="[getMode ? 'text-white' : 'text-m_blue-100']">
                         Let Us Make Your Vision a Reality
                     </h1>
@@ -30,8 +30,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container flex items-center justify-center flex-wrap">
-                <div class="flex items-center flex-col px-12 py-10 mr-10 mb-10 space-y-8 w-96 h-80 rounded-tl-3xl rounded-br-3xl relative"
+            <div class="sm:container px-4 flex items-center justify-center flex-wrap overflow-hidden">
+                <div class="flex items-center flex-col sm:px-12 px-8 sm:py-10 py-6 sm:mr-10 mb-10 sm:space-y-8 space-y-4 sm:w-96 w-80 lg:h-80 rounded-tl-3xl rounded-br-3xl relative"
                     :class="[getMode ? 'bg-m_amber-100' : 'bg-gray-100']" v-for="item in items" :key="item.id" v-scroll-reveal="{ origin: item.animate, distance: '50px', duration: 1000 }">
                     <img class="sm:w-14 w-12 object-cover" :src="item.icon">
                     <h3 class="font-rajdhani font-medium px-6 text-center lg:text-xl text-lg text-m_blue-100 z-10"
@@ -45,10 +45,7 @@
                 </div>
             </div>
         </div>
-        <!-- <ChangeButton /> -->
-        <!-- <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer" @click="changeMode">
-            <img class="lg:w-16 w-14" src="/icons/mode.png">
-        </div> -->
+        <div class="fixed bg-black w-full h-10"></div>
     </div>
 </template>
 
@@ -56,15 +53,13 @@
 import Navbar from '@/components/Navbar.vue';
 import Background from '@/components/Background.vue';
 import SvgAnimation from '@/components/SvgAnimation.vue';
-import ChangeButton from '@/components/ChangeButton.vue';
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
     name: "Home",
     components: {
         Navbar,
         Background,
         SvgAnimation,
-        ChangeButton
     },
     data() {
         return {
@@ -73,7 +68,7 @@ export default {
                 { id: 2, icon: '/svg/komp.svg', title: 'Development of websites of any complexity', subtitle: 'Business card sites / E-commerce / LMS / CRM', animate: 'top' },
                 { id: 3, icon: '/svg/phone.svg', title: 'Mobile application development', subtitle: 'Android & IOS', animate: 'right' },
                 { id: 4, icon: '/svg/pen.svg', title: 'UI / UX design of applications', subtitle: 'Websites and mobile applications', animate: 'left' },
-                { id: 5, icon: '/svg/phone.svg', title: 'Mobile application development', subtitle: 'Android & IOS', animate: 'right' },
+                { id: 5, icon: '/svg/mobile.svg', title: 'Motion design', subtitle: 'Motion Graphics / Logo Animation / UI/UX Animation / 3D Animation', animate: 'right' },
             ]
         }
     },
