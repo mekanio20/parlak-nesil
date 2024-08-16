@@ -36,9 +36,11 @@
                 </div>
                 <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300 md:w-1/2 w-full"
                     v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
-                    Parlak Nesil is a multi-disciplinary design studio. Studio creates brand identities and develops
-                    strategies. We are engaged in finding the optimal solutions covering all spheres of design spectrum
-                    by using a unique approach.
+                    Parlak Nesil is a full-spectrum IT powerhouse. We excel in crafting end-to-end solutions that span
+                    hardware, software, frontend, backend, and mobile development. Our passion lies in fusing
+                    cutting-edge technology with stunning UI/UX design to create digital experiences that resonate. We
+                    turn your vision into reality by developing bespoke IT strategies, ensuring that every detail is
+                    perfectly aligned with your goals.
                 </p>
             </div>
             <div class="pt-20 flex flex-col items-center justify-center"
@@ -100,10 +102,10 @@ export default {
         return {
             activeIndex: 0,
             teams: [
-                { id: 1, name: 'Hardware', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 1, name: 'Hardware', desc: 'We handle everything related to hardware, from system design and component sourcing to assembly and testing. Our expertise includes circuit board design, prototyping, hardware integration, and ensuring compatibility with various software and networking environments. Whether it\'s building custom hardware solutions or optimizing existing systems, we cover it all.' },
                 { id: 2, name: 'Networking', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 3, name: 'Front-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
-                { id: 4, name: 'Back-end developer', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 3, name: 'Front-end developer', desc: 'Our frontend development services focus on creating visually stunning and highly interactive user interfaces. We specialize in building responsive and intuitive designs that provide a seamless experience across all devices. Using the latest frameworks and technologies, we ensure that your application not only looks great but also performs flawlessly. From wireframes and mockups to full-scale development, we bring your vision to life with precision. Our team prioritizes user experience, accessibility, and performance, ensuring that your frontend is as functional as it is beautiful.' },
+                { id: 4, name: 'Back-end developer', desc: 'At our company, we specialize in all aspects of backend development. We design and build robust server-side applications that power the functionality of web and mobile apps. Our team handles everything from server management and database design to API development and integration. By leveraging the latest technologies and best practices, we ensure that our backend solutions are efficient, scalable, and secure.' },
             ]
         }
     },

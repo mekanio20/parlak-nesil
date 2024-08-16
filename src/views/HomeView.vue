@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <ChangeButton />
+        <!-- <ChangeButton /> -->
         <!-- <div class="fixed lg:right-10 right-4 bottom-10 z-50 cursor-pointer" @click="changeMode">
             <img class="lg:w-16 w-14" src="/icons/mode.png">
         </div> -->
