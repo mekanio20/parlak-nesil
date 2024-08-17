@@ -2,8 +2,8 @@
     <div class="w-full py-5 fixed top-0 left-0 right-0 z-50" :class="[getMode ? 'bg-black' : 'bg-white']">
         <div class="container flex items-center justify-between">
             <div class="flex items-center">
-                <router-link to="/" class="xl:w-72 sm:w-60 w-52">
-                    <img :src="[getMode ? '/icons/logo-white.png' : '/icons/logo.png']">
+                <router-link to="/" class="xl:w-60 sm:w-52 w-44">
+                    <img :src="[getMode ? '/icons/logo-white.webp' : '/icons/logo.webp']">
                 </router-link>
             </div>
             <ul class="lg:flex hidden items-center xl:space-x-5 space-x-2">
@@ -37,7 +37,7 @@
         :class="[getMode ? 'bg-black' : 'bg-white']">
         <div class="relative">
 
-            <img src="/svg/navbar-mobile.svg" class="w-full h-full object-cover absolute top-0 left-0 right-0 -z-10">
+            <img src="/svg/navbar-mobile.svg" class="w-full h-full object-cover absolute top-0 bottom-0 left-0 right-0 -z-10">
 
             <div class="flex flex-col space-y-10 items-center">
                 <div class="relative group" v-for="item in items" :key="item.id">

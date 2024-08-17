@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        tv: '1600px'
+        tv: '1600px',
+        phone: '450px'
       },
       colors: {
         m_blue: {

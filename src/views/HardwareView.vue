@@ -2,14 +2,13 @@
     <div class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
         <Navbar link="Hardware" />
         <!-- top, right -->
-        <img src="/icons/hardware-bg-1.png" class="w-full h-full absolute top-0 right-0 object-cover z-10">
-
-        <!-- top, left -->
-        <img src="/icons/hardware-bg-2.png" class="absolute -top-11 -left-28 object-cover z-10 hidden lg:block">
-
+        <img src="/svg/hardware-bg-1.svg" class="w-full h-full absolute top-0 right-0 object-cover z-10">
+        
         <div class="container pt-60 relative z-20">
             <div class="flex md:flex-row flex-col justify-between">
-                <div class="flex-1">
+                <div class="flex-1 relative">
+                    <!-- top, left -->
+                    <img src="/svg/hardware-bg-2.svg" class="absolute -top-[275px] -left-[135px] object-cover hidden lg:block">
                     <div class="flex mb-6 items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']"
@@ -68,8 +67,7 @@
                             v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 200 }">
                             {{ item.name }}</h3>
                         <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300"
-                            v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 300 }">{{
-        item.desc }}</p>
+                            v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 300 }">{{ item.desc }}</p>
                     </div>
                     <div class="w-[580px] h-80 hidden md:block"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
