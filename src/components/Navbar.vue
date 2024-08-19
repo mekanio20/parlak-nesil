@@ -22,11 +22,11 @@
                 <div class="w-10 h-10 mt-3 cursor-pointer lg:hidden">
                     <svg @click="openBurger" :class="{ 'x-shape': isOpen }" width="100%" height="100%" viewBox="0 0 22 25"
                         fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
-                        <path :d="def_ust_cizgi" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        <path :d="def_ust_cizgi" stroke="white" stroke-width="1" stroke-linecap="round"
                             class="line top" />
-                        <path :d="def_alt_cizgi" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        <path :d="def_alt_cizgi" stroke="white" stroke-width="1" stroke-linecap="round"
                             class="line bottom" />
-                        <path d="M1 7.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" class="line middle" />
+                        <path d="M1 7.5H21" stroke="white" stroke-width="1" stroke-linecap="round" class="line middle" />
                     </svg>
                 </div>
             </div>
