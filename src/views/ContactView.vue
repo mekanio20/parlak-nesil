@@ -6,7 +6,7 @@
 
         <div class="container py-56 relative z-20">
             <div class="flex xl:flex-row flex-col items-center justify-between">
-                <div class="flex flex-col xl:items-start items-center xl:justify-between justify-center">
+                <div class="flex flex-col xl:items-start items-center xl:justify-between justify-center mt-10">
                     <div class="flex items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']">

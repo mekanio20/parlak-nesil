@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full tv:min-h-[2400px] relative z-20" :class="[getMode ? 'bg-black' : 'bg-white']">
+            <div class="w-full tv:min-h-[2400px] relative z-20 custom-shadow" :class="[getMode ? 'bg-black' : 'bg-white']">
                 <div class="w-full h-fit absolute -z-10">
                     <SvgAnimation />
                 </div>
@@ -78,3 +78,9 @@ export default {
     }
 }
 </script>
+
+<style>
+.custom-shadow {
+    box-shadow: 0 -50px 40px 5px #000;
+}
+</style>

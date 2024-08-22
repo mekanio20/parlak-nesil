@@ -35,10 +35,8 @@
     <div v-if="isOpen"
         class="select-none w-full h-screen pt-10 pb-8 fixed left-0 right-0 z-50 overflow-hidden duration-200 sm:mt-[76px] mt-[71.5px]"
         :class="[getMode ? 'bg-black' : 'bg-white']">
+        <img src="/svg/navbar-mobile.svg" class="w-full h-full object-cover absolute top-0 bottom-0 left-0 right-0 -z-10">
         <div class="relative">
-
-            <img src="/svg/navbar-mobile.svg" class="w-full h-full object-cover absolute top-0 bottom-0 left-0 right-0 -z-10">
-
             <div class="flex flex-col space-y-10 items-center">
                 <div class="relative group" v-for="item in items" :key="item.id">
                     <router-link :to="item.route"

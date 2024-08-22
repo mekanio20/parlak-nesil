@@ -49,30 +49,39 @@
             </div>
 
             <div class="flex flex-col items-center">
-                <h4 class="my-28 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase"
+                <h4 class="sm:my-28 my-16 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase"
                     :class="[getMode ? 'text-white' : 'text-black']"
                     v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">Our team</h4>
-
-                <div class="w-full flex flex-row items-start justify-between border-m_gray-500 border-t px-4 py-4 overflow-hidden"
-                    v-for="(item, index) in teams" :key="item.id"
-                    :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 h-52'">
-                    <div class="leading-none font-rajdhani font-medium lg:text-[350px] md:text-[300px] sm:text-[200px] text-[150px]"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100']"
-                        v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">0{{ item.id }}</div>
-                    <div class="flex flex-col space-y-4 mt-3 mx-4 sm:w-[450px] w-[350px] duration-500"
-                        :class="activeIndex === index ? 'pt-10' : ' pt-24'"
+                <div class="w-full flex flex-col" v-for="(item, index) in teams" :key="item.id">
+                    <div class="w-full flex flex-row items-start justify-between border-m_gray-500 border-t px-4 py-4 overflow-hidden"
+                        :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 phone:h-52'">
+                        <div class="!leading-none font-rajdhani font-medium lg:text-[350px] md:text-[300px] sm:text-[200px] text-[150px]"
+                            :class="[getMode ? 'text-white' : 'text-m_blue-100']"
+                            v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">0{{ item.id }}</div>
+                        <div class="phone:flex hidden flex-col space-y-4 mt-3 mx-4 sm:w-[450px] w-[350px] duration-500"
+                            :class="activeIndex === index ? 'pt-10' : 'pt-24'"
+                            v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
+                            <h3 class="font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase sm:mb-8 mb-10"
+                                :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.name }}</h3>
+                            <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">
+                                {{ item.desc }}
+                            </p>
+                        </div>
+                        <div class="mt-10" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                            <button
+                                class="rounded-full phone:flex hidden items-center justify-center md:px-6 md:py-4 px-4 py-2 border-m_gray-500 border"
+                                @click="toggleAccordion(index)">
+                                <span class="text-xl text-m_gray-500">{{ activeIndex === index ? '-' : '+' }}</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="phone:hidden flex flex-col space-y-4 mt-3 mx-4 sm:w-[450px] w-[350px] duration-500"
                         v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
                         <h3 class="font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase mb-8"
                             :class="[getMode ? 'text-white' : 'text-m_blue-100']">{{ item.name }}</h3>
-                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300">
+                        <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300 pb-10">
                             {{ item.desc }}
                         </p>
-                    </div>
-                    <div class="mt-10" v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-                        <button class="rounded-full flex items-center justify-center md:px-6 md:py-4 px-4 py-2 border-m_gray-500 border"
-                            @click="toggleAccordion(index)">
-                            <span class="text-xl text-m_gray-500">{{ activeIndex === index ? '-' : '+' }}</span>
-                        </button>
                     </div>
                 </div>
             </div>

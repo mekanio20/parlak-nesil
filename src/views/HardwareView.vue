@@ -71,12 +71,8 @@
                     </div>
                     <div class="w-[580px] h-80 hidden md:block"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-                        <img class="w-full h-full object-cover" :src="item.img">
+                        <img class="w-full h-full object-cover" v-lazy="item.img">
                     </div>
-                </div>
-                <div class="text-center">
-                    <button class="lg:px-20 lg:py-5 px-14 py-4 border border-m_gray-300 text-m_gray-300 my-16">See
-                        all</button>
                 </div>
             </div>
         </div>
