@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="mt-20 flex items-center space-x-6">
+            <div class="mt-20 sm:flex hidden items-center space-x-6">
                 <div class="flex-1">
                     <img class="object-cover" v-lazy="'/imgs/team-1.webp'" lazy="loading"
                         v-scroll-reveal="{ origin: 'left', distance: '100px', duration: 1000 }">
@@ -97,6 +97,15 @@
                     <img class="object-cover" v-lazy="'/imgs/team-3.webp'" lazy="loading"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                 </div>
+            </div>
+
+            <div class="mt-20 sm:hidden flex flex-col items-center space-y-10">
+                <img class="object-cover" v-lazy="'/imgs/team-1.webp'" lazy="loading"
+                    v-scroll-reveal="{ origin: 'left', distance: '100px', duration: 1000 }">
+                <img class="object-cover" v-lazy="'/imgs/team-2.webp'" lazy="loading"
+                    v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
+                <img class="object-cover" v-lazy="'/imgs/team-3.webp'" lazy="loading"
+                    v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
             </div>
         </div>
     </div>
@@ -112,7 +121,7 @@ export default {
             activeIndex: 0,
             teams: [
                 { id: 1, name: 'Hardware', desc: 'We handle everything related to hardware, from system design and component sourcing to assembly and testing. Our expertise includes circuit board design, prototyping, hardware integration, and ensuring compatibility with various software and networking environments. Whether it\'s building custom hardware solutions or optimizing existing systems, we cover it all.' },
-                { id: 2, name: 'Mobile development', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe consequuntur? Dolorum, explicabo tenetur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus sequi unde! Atque, mollitia iste, quod illo tenetur ipsa sapiente odit officia dolorem deserunt rerum saepe.' },
+                { id: 2, name: 'Mobile development', desc: 'At Parlak Nesil, we specialize in creating high-quality mobile applications for both iOS and Android platforms, as well as tablet devices. Our team handles every aspect of mobile development, from concept to deployment, ensuring your app is robust, scalable, and user-friendly. Whether you need a native, cross-platform, or hybrid mobile application, we leverage the latest technologies and best practices to deliver a seamless and engaging user experience across all devices. Let us help you bring your mobile app idea to life, transforming your vision into a reality that drives business growth and customer engagement.' },
                 { id: 3, name: 'Front-end developer', desc: 'Our frontend development services focus on creating visually stunning and highly interactive user interfaces. We specialize in building responsive and intuitive designs that provide a seamless experience across all devices. Using the latest frameworks and technologies, we ensure that your application not only looks great but also performs flawlessly. From wireframes and mockups to full-scale development, we bring your vision to life with precision. Our team prioritizes user experience, accessibility, and performance, ensuring that your frontend is as functional as it is beautiful.' },
                 { id: 4, name: 'Back-end developer', desc: 'At our company, we specialize in all aspects of backend development. We design and build robust server-side applications that power the functionality of web and mobile apps. Our team handles everything from server management and database design to API development and integration. By leveraging the latest technologies and best practices, we ensure that our backend solutions are efficient, scalable, and secure.' },
             ]
