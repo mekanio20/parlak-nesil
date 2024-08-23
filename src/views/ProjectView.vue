@@ -31,11 +31,15 @@
                 </div>
             </div>
         </div>
+        <div class="mt-20">
+            <Footer />
+        </div>
     </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 export default {
     name: "Project",
     data() {
@@ -63,7 +67,8 @@ export default {
         }
     },
     components: {
-        Navbar
+        Navbar,
+        Footer
     }
 }
 </script>

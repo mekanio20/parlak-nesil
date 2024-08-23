@@ -45,7 +45,7 @@
             </div>
             <div class="pt-20 flex flex-col items-center justify-center"
                 v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
-                <img src="/icons/parlak-nesil.webp" class="object-cover lg:w-52 sm:w-40 w-32">
+                <img src="/svg/parlak-nesil.svg" class="object-cover lg:w-52 sm:w-40 w-32">
             </div>
 
             <div class="flex flex-col items-center">
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="mt-20 sm:flex hidden items-center space-x-6">
+            <!-- <div class="mt-20 sm:flex hidden items-center space-x-6">
                 <div class="flex-1">
                     <img class="object-cover" v-lazy="'/imgs/team-1.webp'" lazy="loading"
                         v-scroll-reveal="{ origin: 'left', distance: '100px', duration: 1000 }">
@@ -106,7 +106,10 @@
                     v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                 <img class="object-cover" v-lazy="'/imgs/team-3.webp'" lazy="loading"
                     v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-            </div>
+            </div> -->
+        </div>
+        <div class="mt-20">
+            <Footer />
         </div>
     </div>
 </template>
@@ -114,6 +117,7 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import { mapGetters } from 'vuex';
+import Footer from '@/components/Footer.vue';
 export default {
     name: "About",
     data() {
@@ -128,7 +132,8 @@ export default {
         }
     },
     components: {
-        Navbar
+        Navbar,
+        Footer
     },
     methods: {
         toggleAccordion(index) {

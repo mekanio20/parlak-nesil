@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen fixed sm:top-0 -top-24 z-10">
+    <div class="w-full h-screen fixed sm:top-0 -top-24 z-10" v-show="showSVG">
         <svg v-if="getMode" width="100%" height="100%" viewBox="0 0 1920 1080" fill="none"
             xmlns="http://www.w3.org/2000/svg" class="svg-container">
             <g class="svg-group" filter="url(#filter0_d_963_1455)">
@@ -24,7 +24,8 @@
                 </filter>
             </defs>
         </svg>
-        <svg v-if="!getMode" width="100%" height="100%" viewBox="0 0 1918 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!getMode" width="100%" height="100%" viewBox="0 0 1918 1080" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-inside-1_963_1432" fill="white">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M446.035 -730L1917.42 -74.937L1812.03 161.804L1614.57 605.317L1377.83 499.92L379.926 55.6517L71.7396 747.894L-165.001 642.497L143.186 -49.7454L143.185 -49.7455L248.583 -286.486L1483.23 263.179L1575.28 56.4062L340.638 -493.259L446.035 -730ZM274.02 837.947L497.488 335.997L734.229 441.394L1359.04 719.563L1529.86 795.609L1306.39 1297.56L1069.65 1192.16L1187.72 926.952L628.831 678.135L510.76 943.344L274.02 837.947Z" />
@@ -44,8 +45,17 @@
 import { mapGetters } from 'vuex';
 export default {
     name: "Background",
+    data() {
+        return {
+            showSVG: true
+        }
+    },
     mounted() {
         this.animateSVG();
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         animateSVG() {
@@ -61,6 +71,16 @@ export default {
                 svgPath.style.fill = "#000000";
             }, 200);
         },
+        handleScroll() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.body.scrollHeight;
+
+            if (scrollPosition >= pageHeight) {
+                this.showSVG = false;
+            } else {
+                this.showSVG = true;
+            }
+        }
     },
     computed: {
         ...mapGetters(['getMode']),

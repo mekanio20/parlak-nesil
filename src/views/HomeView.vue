@@ -1,5 +1,5 @@
 <template>
-    <div class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
+    <div id="top" class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
         <Navbar link="Home" />
         <Background />
         <div class="absolute top-0 left-0 right-0">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="sm:container px-4 flex items-center justify-center flex-wrap overflow-hidden">
-                    <div class="flex items-center flex-col sm:px-12 px-8 sm:py-10 py-6 sm:mr-10 mb-10 sm:space-y-8 space-y-4 sm:w-96 w-80 lg:h-80 rounded-tl-3xl rounded-br-3xl relative"
+                    <div class="flex items-center flex-col sm:px-12 px-8 sm:py-10 py-6 lg:mr-6 mr-8 mb-8 sm:space-y-8 space-y-4 sm:w-96 w-80 lg:h-80 rounded-tl-3xl rounded-br-3xl relative"
                         :class="[getMode ? 'bg-m_amber-100' : 'bg-gray-100']" v-for="item in items" :key="item.id" v-scroll-reveal="{ origin: item.animate, distance: '50px', duration: 1000 }">
                         <img class="sm:w-14 w-12 object-cover" :src="item.icon">
                         <h3 class="font-rajdhani font-medium px-6 text-center lg:text-xl text-lg text-m_blue-100 z-10"
@@ -45,6 +45,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-20">
+                    <Footer />
+                </div>
             </div>
         </div>
     </div>
@@ -54,6 +57,7 @@
 import Navbar from '@/components/Navbar.vue';
 import Background from '@/components/Background.vue';
 import SvgAnimation from '@/components/SvgAnimation.vue';
+import Footer from '@/components/Footer.vue';
 import { mapGetters } from 'vuex';
 export default {
     name: "Home",
@@ -61,6 +65,7 @@ export default {
         Navbar,
         Background,
         SvgAnimation,
+        Footer
     },
     data() {
         return {

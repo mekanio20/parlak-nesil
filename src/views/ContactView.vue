@@ -13,7 +13,9 @@
                             Contact us
                         </h1>
                         <div class="mb-2 ml-2">
-                            <div class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce"></div>
+                            <div
+                                class="rounded-full lg:w-3 lg:h-3 w-2 h-2 bg-m_orange-100 animate__animated animate__bounce">
+                            </div>
                         </div>
                     </div>
                     <div class="xl:mt-44 my-10 xl:w-[515px] lg:w-[450px] md:w-[400px] w-[300px]">
@@ -36,33 +38,21 @@
                 </div>
             </div>
         </div>
-        <div class="py-10 border-t border-m_gray-500">
-            <div class="container flex md:flex-row flex-col md:space-y-0 space-y-10 items-center justify-between">
-                <div class="flex flex-col items-center">
-                    <p class="md:mb-4 mb-2 font-rajdhani font-medium lg:text-xl text-lg text-m_gray-600 uppercase">Call</p>
-                    <p class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_gray-700">+993 62 410579</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <p class="md:mb-4 mb-2 font-rajdhani font-medium lg:text-xl text-lg text-m_gray-600 uppercase">Our Address</p>
-                    <p class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_gray-700">Aşgabat ş. Bitarap Türkmenistan
-                        şaýoly, 163</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <p class="md:mb-4 mb-2 font-rajdhani font-medium lg:text-xl text-lg text-m_gray-600 uppercase">Send An Email</p>
-                    <p class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_gray-700">parlaknesil@gmail.com</p>
-                </div>
-            </div>
+        <div class="mt-20">
+            <Footer />
         </div>
     </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 import { mapGetters } from 'vuex';
 export default {
     name: "Contact",
     components: {
         Navbar,
+        Footer
     },
     computed: {
         ...mapGetters(['getMode']),
