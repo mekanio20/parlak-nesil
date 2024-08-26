@@ -1,19 +1,37 @@
 <template>
   <div class="!w-full !h-full">
+    <Loader :loading="loading" />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 import { mapGetters, mapActions } from 'vuex';
+import Loader from '@/components/Loader.vue';
 export default {
   name: "App",
   components: {
-    RouterView
+    RouterView,
+    Loader
   },
-  mounted() {
+  data() {
+    return {
+      loading: false
+    }
+  },
+  created() {
     this.updateBodyStyles(this.getMode)
+    const router = useRouter()
+
+    router.beforeEach((to, from, next) => {
+      this.loading = true
+      next()
+    })
+
+    router.afterEach(() => {
+      this.loading = false
+    })
   },
   methods: {
     ...mapActions(['changeMode']),
