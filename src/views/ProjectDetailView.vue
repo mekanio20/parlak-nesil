@@ -32,27 +32,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col space-y-2">
-                            <h2 class="font-inter font-normal lg:text-base md:text-sm text-xs">Tools</h2>
-                            <div class="flex items-center space-x-4">
-                                <div class="flex flex-col space-y-2" v-for="item in project.tools" :key="item">
-                                    <div class="md:w-20 md:h-20 w-10 h-10">
-                                        <img class="w-full h-full object-contain" v-lazy="item" lazy="loading">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="phone:w-1/2 w-full flex flex-col justify-end phone:space-y-40 phone:mt-0 mt-20 space-y-10">
-                        <div class="flex flex-col space-y-6">
-                            <h3 class="font-inter font-normal lg:text-base md:text-sm text-xs">Country</h3>
-                            <p class="font-rajdhani font-sembolid lg:text-2xl sm:text-xl text-lg">{{ project.country }}</p>
-                        </div>
-                        <div class="flex flex-col space-y-6">
-                            <h3 class="font-inter font-normal lg:text-base md:text-sm text-xs">Client</h3>
-                            <p class="font-rajdhani font-sembolid lg:text-2xl sm:text-xl text-lg">{{ project.client }}</p>
-                        </div>
                         <div class="flex flex-col space-y-6">
                             <h3 class="font-inter font-normal lg:text-base md:text-sm text-xs">Details</h3>
                             <div class="w-fit">
@@ -62,10 +41,21 @@
                             </div>
                         </div>
                     </div>
+                    <div
+                        class="phone:w-1/2 w-full flex flex-col justify-center phone:space-y-40 phone:mt-0 mt-20 space-y-10">
+                        <div class="flex flex-col space-y-6">
+                            <h3 class="font-inter font-normal lg:text-base md:text-sm text-xs">Country</h3>
+                            <p class="font-rajdhani font-sembolid lg:text-2xl sm:text-xl text-lg">{{ project.country }}</p>
+                        </div>
+                        <div class="flex flex-col space-y-6">
+                            <h3 class="font-inter font-normal lg:text-base md:text-sm text-xs">Client</h3>
+                            <p class="font-rajdhani font-sembolid lg:text-2xl sm:text-xl text-lg">{{ project.client }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="mt-20">
+        <div class="mt-20 relative z-50">
             <Footer />
         </div>
     </div>

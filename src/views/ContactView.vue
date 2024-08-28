@@ -1,5 +1,5 @@
 <template>
-    <div class="relative min-h-screen overflow-hidden" :class="[getMode ? 'bg-black' : 'bg-white']">
+    <div class="relative min-h-screen overflow-hidden">
         <Navbar />
         <!-- contact bg -->
         <img src="/svg/contact-bg.svg" class="w-full h-full object-cover absolute top-0 left-0 right-0 z-10">
@@ -8,8 +8,7 @@
             <div class="flex xl:flex-row flex-col items-center justify-between">
                 <div class="flex flex-col xl:items-start items-center xl:justify-between justify-center mt-10">
                     <div class="flex items-end">
-                        <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight"
-                            :class="[getMode ? 'text-white' : 'text-m_blue-100']">
+                        <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight">
                             Contact us
                         </h1>
                         <div class="mb-2 ml-2">
@@ -38,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-20">
+        <div class="mt-20 relative z-50">
             <Footer />
         </div>
     </div>
@@ -47,15 +46,11 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
-import { mapGetters } from 'vuex';
 export default {
     name: "Contact",
     components: {
         Navbar,
         Footer
-    },
-    computed: {
-        ...mapGetters(['getMode']),
-    },
+    }
 }
 </script>

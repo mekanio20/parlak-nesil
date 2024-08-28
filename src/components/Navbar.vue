@@ -10,15 +10,24 @@
                 <li class="relative group" v-for="item in items" :key="item.id">
                     <router-link :to="item.route"
                         class="px-2 py-2 xl:text-lg text-base uppercase font-rajdhani font-semibold hover:text-m_gray-300 duration-300"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100', link === item.name ? 'text-m_orange-100' : 'text-m_blue-100']">{{
-        item.name }}
+                        :class="[getMode ? 'text-white' : 'text-m_blue-100', link === item.name ? 'text-m_orange-100' : 'text-m_blue-100']">
+                        {{ $t(`nav.title${item.id}`) }}
                     </router-link>
                 </li>
             </ul>
             <div class="flex items-center space-x-8">
+                <div class="cursor-pointer relative">
+                    <svg @click="openLang" width="28" height="28" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.4987 33.5423C26.3581 33.5423 33.5404 26.36 33.5404 17.5007C33.5404 8.64128 26.3581 1.45898 17.4987 1.45898M17.4987 33.5423C8.63932 33.5423 1.45703 26.36 1.45703 17.5007C1.45703 8.64128 8.63932 1.45898 17.4987 1.45898M17.4987 33.5423C21.8737 33.5423 23.332 26.2507 23.332 17.5007C23.332 8.75065 21.8737 1.45898 17.4987 1.45898M17.4987 33.5423C13.1237 33.5423 11.6654 26.2507 11.6654 17.5007C11.6654 8.75065 13.1237 1.45898 17.4987 1.45898M2.91536 23.334H32.082M2.91536 11.6673H32.082" stroke="white" stroke-width="2.4"/>
+                    </svg>
+                    <div v-show="isLang" class="absolute top-12 -left-5 bg-m_amber-100 py-2">
+                        <div class="font-rajdhani font-medium py-2 px-6 text-xl hover:text-m_orange-100 duration-300" v-for="item in langs" :key="item" @click="updateLang(item)" :class="[this.$i18n.locale == item ? 'text-m_orange-100' : 'text-white']">
+                            {{ item }}
+                        </div>
+                    </div>
+                </div>
                 <router-link to="/contact"
-                    class="px-6 py-2 bg-m_orange-100 rounded-full text-white font-bold text-nowrap xl:text-base text-sm font-jetBrains hover:opacity-80 duration-500 hidden sm:block">Contact
-                    us</router-link>
+                    class="px-6 py-2 bg-m_orange-100 rounded-full text-white font-bold text-nowrap xl:text-base text-sm font-jetBrains hover:opacity-80 duration-500 hidden sm:block select-none">{{ $t('nav.title6') }}</router-link>
                 <div class="w-10 h-10 mt-3 cursor-pointer lg:hidden">
                     <svg @click="openBurger" :class="{ 'x-shape': isOpen }" width="100%" height="100%" viewBox="0 0 22 25"
                         fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
@@ -49,7 +58,7 @@
                     <router-link to="/contact"
                         class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300"
                         :class="[getMode ? 'text-m_orange-100' : 'text-m_blue-100']">
-                        Contact
+                        {{ $t('nav.title5') }}
                     </router-link>
                 </div>
             </div>
@@ -64,18 +73,21 @@ export default {
     data() {
         return {
             isOpen: false,
+            isLang: false,
             ust_duz_cizgi: 'M1 1H21',
             alt_duz_cizgi: 'M21 14H1',
             gec_ust_cizgi: 'M1 1H4.75M21 1H9.75',
             gec_alt_cizgi: 'M21 14H17.25M1 14H12.25',
             def_ust_cizgi: 'M1 1H4.75M21 1H9.75',
             def_alt_cizgi: 'M21 14H17.25M1 14H12.25',
+            locale: localStorage.getItem('lang') || 'EN',
+            langs: ['TM', 'EN'],
             items: [
-                { id: 1, route: '/', name: 'Home' },
-                { id: 2, route: '/about', name: 'About us' },
-                { id: 3, route: '/hardware', name: 'Hardware' },
-                { id: 4, route: '/software', name: 'Software' },
-                { id: 5, route: '/projects', name: 'Projects' },
+                { id: 1, route: '/' },
+                { id: 2, route: '/about' },
+                { id: 3, route: '/hardware' },
+                { id: 4, route: '/software' },
+                { id: 5, route: '/projects' },
             ]
         }
     },
@@ -85,6 +97,9 @@ export default {
         }
     },
     methods: {
+        openLang() {
+            this.isLang = !this.isLang
+        },
         openBurger() {
             this.isOpen = !this.isOpen
             if (this.isOpen) {
@@ -94,6 +109,12 @@ export default {
                 this.def_ust_cizgi = this.gec_ust_cizgi
                 this.def_alt_cizgi = this.gec_alt_cizgi
             }
+        },
+        updateLang(lang) {
+            localStorage.setItem('lang', lang)
+            this.locale = lang
+            this.isLang = !this.isLang
+            this.$i18n.locale = lang
         },
     },
     computed: {

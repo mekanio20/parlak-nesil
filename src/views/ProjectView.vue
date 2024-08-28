@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-20">
+        <div class="mt-20 relative z-50">
             <Footer />
         </div>
     </div>
@@ -44,7 +44,7 @@ import { projects } from '@/data/index';
 export default {
     name: "Project",
     async created() {
-        this.all_projects = await projects.EN
+        this.all_projects = projects[this.$i18n.locale]
     },
     data() {
         return {

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative min-h-screen" :class="[getMode ? 'bg-black' : 'bg-white']">
+    <div class="relative min-h-screen">
         <Navbar link="Hardware" />
         <!-- top, right -->
         <img src="/svg/hardware-bg-1.svg" class="w-full h-full absolute top-0 right-0 object-cover z-10">
@@ -12,7 +12,6 @@
                         class="absolute -top-[275px] -left-[135px] object-cover hidden lg:block">
                     <div class="flex mb-6 items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
-                            :class="[getMode ? 'text-white' : 'text-m_blue-100']"
                             v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
                             Hardware
                         </h1>
@@ -24,8 +23,7 @@
                     </div>
                 </div>
                 <div class="flex-1 flex flex-col space-y-10">
-                    <p class="font-inter font-normal lg:text-lg sm:text-base text-sm"
-                        :class="[getMode ? 'text-m_gray-300' : 'text-m_gray-500']"
+                    <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
                         Our hardware services encompass the complete lifecycle of hardware development and integration.
                         We begin with detailed system design, ensuring that every component is carefully selected to
@@ -45,8 +43,7 @@
                         but also innovative, scalable, and aligned with your business objectives.
                     </p>
                     <div class="flex items-center flex-wrap">
-                        <p class="font-jetBrains font-normal lg:px-10 lg:py-3 px-6 py-2 mr-4 mb-4 lg:text-sm text-xs"
-                            :class="[getMode ? 'bg-m_amber-100 text-white' : 'bg-m_gray-400 text-m_blue-100']"
+                        <p class="font-jetBrains font-normal lg:px-10 lg:py-3 px-6 py-2 mr-4 mb-4 lg:text-sm text-xs bg-m_amber-100 text-white"
                             v-for="item in items" :key="item.id"
                             v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000, delay: item.delay }">
                             {{ item.name }}
@@ -64,7 +61,6 @@
                                 v-for="i in item.cats" :key="i">{{ i }}</p>
                         </div>
                         <h3 class="font-rajdhani font-medium lg:text-4xl md:text-3xl text-2xl"
-                            :class="[getMode ? 'text-white' : 'text-black']"
                             v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000, delay: 200 }">
                             {{ item.name }}</h3>
                         <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300"
@@ -78,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-20">
+        <div class="mt-20 relative z-50">
             <Footer />
         </div>
     </div>
@@ -86,7 +82,6 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue';
-import { mapGetters } from 'vuex';
 import Footer from '@/components/Footer.vue';
 export default {
     name: "Hardware",
@@ -120,9 +115,6 @@ export default {
     components: {
         Navbar,
         Footer
-    },
-    computed: {
-        ...mapGetters(['getMode']),
-    },
+    }
 }
 </script>
