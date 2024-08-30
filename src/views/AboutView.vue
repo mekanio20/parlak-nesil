@@ -48,6 +48,7 @@
 
             <div class="pt-20 flex flex-col items-center justify-center"
                 v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
+                <h3 class="font-rajdhani font-semibold lg:text-6xl sm:text-5xl text-4xl uppercase mb-8">Ceo of IT</h3>
                 <img src="/imgs/akmuhammed.webp" class="object-cover lg:w-80 sm:w-52 w-40">
                 <p class="mt-4 font-rajdhani font-semibold text-xl">Akmuhammed Nurmuradow</p>
             </div>
@@ -59,7 +60,7 @@
                     <div class="w-full flex flex-row items-start justify-between border-m_gray-500 border-t px-4 py-4 overflow-hidden"
                         :class="activeIndex === index ? 'duration-500 h-fit' : 'duration-500 phone:h-52'">
                         <div class="!leading-none font-rajdhani font-medium lg:text-[350px] md:text-[300px] sm:text-[200px] text-[150px]"
-                            v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">0{{ item.id }}</div>
+                            v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }" :class="[index === 0 ? 'mr-14' : '']">0{{ item.id }}</div>
                         <div class="phone:flex hidden flex-col space-y-4 mt-3 mx-4 sm:w-[450px] w-[350px] duration-500"
                             :class="activeIndex === index ? 'pt-10' : 'pt-24'"
                             v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
