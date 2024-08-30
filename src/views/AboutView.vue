@@ -46,6 +46,12 @@
                 <img src="/svg/parlak-nesil.svg" class="object-cover lg:w-52 sm:w-40 w-32">
             </div>
 
+            <div class="pt-20 flex flex-col items-center justify-center"
+                v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">
+                <img src="/imgs/akmuhammed.webp" class="object-cover lg:w-80 sm:w-52 w-40">
+                <p class="mt-4 font-rajdhani font-semibold text-xl">Akmuhammed Nurmuradow</p>
+            </div>
+
             <div class="flex flex-col items-center">
                 <h4 class="sm:my-28 my-16 font-rajdhani font-semibold lg:text-4xl md:text-3xl text-2xl uppercase"
                     v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">Our team</h4>
