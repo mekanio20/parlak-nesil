@@ -13,8 +13,8 @@
             </div>
             <div class="flex flex-col items-center">
                 <p class="md:mb-4 mb-2 font-rajdhani font-medium lg:text-xl text-lg text-m_gray-600 uppercase">{{ $t('footer.title3') }}</p>
-                <a href="mailto:parlaknesil@gmail.com" class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_gray-700">
-                    parlaknesil@gmail.com</a>
+                <a href="mailto:info@parlaknesil.com" class="font-rajdhani font-medium lg:text-2xl sm:text-xl text-lg text-m_gray-700">
+                    info@parlaknesil.com</a>
             </div>
         </div>
     </div>
