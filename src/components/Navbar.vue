@@ -49,15 +49,13 @@
             <div class="flex flex-col space-y-10 items-center">
                 <div class="relative group" v-for="item in items" :key="item.id">
                     <router-link :to="item.route"
-                        class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300"
-                        :class="[getMode ? 'text-white' : 'text-m_blue-100', link === item.name ? 'text-m_orange-100' : 'text-m_blue-100']">
+                        class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300 text-white">
                         {{ item.name }}
                     </router-link>
                 </div>
                 <div class="relative group block sm:hidden">
                     <router-link to="/contact"
-                        class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300"
-                        :class="[getMode ? 'text-m_orange-100' : 'text-m_blue-100']">
+                        class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300 text-white">
                         {{ $t('nav.title5') }}
                     </router-link>
                 </div>
@@ -83,11 +81,11 @@ export default {
             locale: localStorage.getItem('lang') || 'EN',
             langs: ['TM', 'EN'],
             items: [
-                { id: 1, route: '/' },
-                { id: 2, route: '/about' },
-                { id: 3, route: '/hardware' },
-                { id: 4, route: '/software' },
-                { id: 5, route: '/projects' },
+                { id: 1, name: 'Home', route: '/' },
+                { id: 2, name: 'About us', route: '/about' },
+                { id: 3, name: 'Hardware', route: '/hardware' },
+                { id: 4, name: 'Software', route: '/software' },
+                { id: 5, name: 'Projects', route: '/projects' },
             ]
         }
     },

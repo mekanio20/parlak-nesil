@@ -15,8 +15,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full tv:min-h-[2400px] relative z-20 bg-black" style="box-shadow: 0 -50px 40px 5px #000">
-                <div class="w-full h-fit absolute -z-10">
+            <div class="w-full h-full relative z-20 bg-black" style="box-shadow: 0 -50px 40px 5px #000">
+                <div class="w-full h-full absolute -top-40 -z-10">
                     <SvgAnimation />
                 </div>
                 <div class="w-full h-full container flex items-center justify-center xl:pt-72 xl:pb-60 lg:pt-60 lg:pb-52 py-20">
