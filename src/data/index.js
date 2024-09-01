@@ -212,22 +212,22 @@ export const projects = {
       client: "Biznes Türkmenistan",
       url: "https://play.google.com/store/apps/details?id=com.tmt.business&pcampaignid=web_share",
     },
-    {
-      id: 3,
-      images: [
-        "project-3.webp",
-        "project-3-3.webp",
-        "project-3-3.webp",
-      ],
-      cat: "Website & Mobile application & UI/UX Design",
-      name: "Online Courses",
-      desc: "Online Courses is a dynamic platform that offers a wide range of educational programs designed to help you achieve your learning goals from anywhere in the world.",
-      colors: ["#FFCC02", "#535353", "#FFFFFF"],
-      tools: ["/icons/figma.webp", "/svg/django.svg"],
-      country: "Russia",
-      client: "Metall Market",
-      url: "/project/3",
-    },
+    // {
+    //   id: 3,
+    //   images: [
+    //     "project-3.webp",
+    //     "project-3-3.webp",
+    //     "project-3-3.webp",
+    //   ],
+    //   cat: "Website & Mobile application & UI/UX Design",
+    //   name: "Online Courses",
+    //   desc: "Online Courses is a dynamic platform that offers a wide range of educational programs designed to help you achieve your learning goals from anywhere in the world.",
+    //   colors: ["#FFCC02", "#535353", "#FFFFFF"],
+    //   tools: ["/icons/figma.webp", "/svg/django.svg"],
+    //   country: "Russia",
+    //   client: "Metall Market",
+    //   url: "/project/3",
+    // },
     {
       id: 15,
       images: [
