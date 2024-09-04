@@ -56,7 +56,7 @@
                 <div class="relative group block sm:hidden">
                     <router-link to="/contact"
                         class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300 text-white">
-                        {{ $t('nav.title5') }}
+                        {{ $t('nav.title6') }}
                     </router-link>
                 </div>
             </div>
