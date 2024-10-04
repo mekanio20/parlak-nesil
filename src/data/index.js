@@ -15,7 +15,7 @@ export const projects = {
       tools: ["/icons/figma.webp", "/icons/photoshop.webp", "/svg/vite.svg"],
       country: "Türkmenistan",
       client: "Parlak Nesil",
-      url: "/project/1",
+      url: ""
     },
     {
       id: 12,
@@ -31,7 +31,7 @@ export const projects = {
       tools: ["/icons/figma.webp", "/svg/django.svg"],
       country: "Russia",
       client: "Metall Market",
-      url: "/project/12",
+      url: ""
     },
     {
       id: 14,
@@ -64,7 +64,7 @@ export const projects = {
       tools: ["/icons/photoshop.webp", "/icons/illustrator.webp"],
       country: "Türkmenistan",
       client: "Parlak Nesil",
-      url: "/project/4",
+      url: ""
     },
     {
       id: 5,
@@ -96,7 +96,7 @@ export const projects = {
       tools: ["/icons/figma.webp", "/svg/flutter.svg"],
       country: "Austria",
       client: "Start-up",
-      url: "/project/6",
+      url: ""
     },
     {
       id: 7,
@@ -144,7 +144,7 @@ export const projects = {
       tools: ["/icons/figma.webp", "/svg/flutter.svg"],
       country: "Türkmenistan",
       client: "Optowoy app",
-      url: "/project/9",
+      url: ""
     },
     {
       id: 10,
@@ -161,7 +161,7 @@ export const projects = {
       tools: ["/icons/photoshop.webp", "/icons/illustrator.webp"],
       country: "Türkmenistan",
       client: "Parlak Nesil",
-      url: "/project/10",
+      url: ""
     },
     {
       id: 11,
@@ -177,7 +177,7 @@ export const projects = {
       tools: ["/icons/figma.webp", "/svg/django.svg"],
       country: "Russia",
       client: "Metall Market",
-      url: "/project/11",
+      url: ""
     },
     {
       id: 2,
@@ -194,7 +194,7 @@ export const projects = {
       tools: ["/icons/photoshop.webp", "/icons/illustrator.webp"],
       country: "Türkmenistan",
       client: "Parlak Nesil",
-      url: "/project/2",
+      url: ""
     },
     {
       id: 18,
@@ -226,7 +226,7 @@ export const projects = {
     //   tools: ["/icons/figma.webp", "/svg/django.svg"],
     //   country: "Russia",
     //   client: "Metall Market",
-    //   url: "/project/3",
+    //   url: ""
     // },
     {
       id: 15,
@@ -287,7 +287,7 @@ export const projects = {
       tools: ["/icons/figma.webp"],
       country: "Türkmenistan",
       client: "Yoda",
-      url: "/project/13",
+      url: ""
     },
   ],
 };

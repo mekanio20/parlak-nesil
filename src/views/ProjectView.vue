@@ -22,7 +22,7 @@
                     v-scroll-reveal="{ origin: 'top', distance: '100px', duration: 1000 }"
                     class="w-full mb-10 overflow-hidden">
                     <router-link :to="`/project/${item.id}`">
-                        <img class="w-full object-cover mb-3" v-lazy="`/imgs/${item.images[0]}`" lazy="loading" />
+                        <img class="w-full object-cover mb-3" v-lazy="`/imgs/${item?.images[0]}`" lazy="loading" />
                         <h3 class="font-semibold font-rajdhani lg:text-2xl sm:text-xl text-lg">
                             {{ item.name }}
                         </h3>
