@@ -9,7 +9,7 @@
                 <div class="flex flex-col xl:items-start items-center xl:justify-between justify-center mt-10">
                     <div class="flex items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight">
-                            Contact us
+                            {{ $t('nav.title6') }}
                         </h1>
                         <div class="mb-2 ml-2">
                             <div

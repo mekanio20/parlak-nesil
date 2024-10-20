@@ -79,7 +79,7 @@ export default {
             def_ust_cizgi: 'M1 1H4.75M21 1H9.75',
             def_alt_cizgi: 'M21 14H17.25M1 14H12.25',
             locale: localStorage.getItem('lang') || 'EN',
-            langs: ['TM', 'EN'],
+            langs: ['TM', 'EN' ,'RU'],
             items: [
                 { id: 1, name: 'Home', route: '/' },
                 { id: 2, name: 'About us', route: '/about' },

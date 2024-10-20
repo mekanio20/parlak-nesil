@@ -13,7 +13,7 @@
                     <div class="flex mb-6 items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
                             v-scroll-reveal="{ origin: 'left', distance: '50px', duration: 1000 }">
-                            Hardware
+                            {{ $t('nav.title3') }}
                         </h1>
                         <div class="mb-2 ml-2">
                             <div
@@ -25,22 +25,11 @@
                 <div class="flex-1 flex flex-col space-y-10">
                     <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-                        Our hardware services encompass the complete lifecycle of hardware development and integration.
-                        We begin with detailed system design, ensuring that every component is carefully selected to
-                        meet the specific needs of your project. Our expertise includes custom circuit board design,
-                        prototyping, and manufacturing, enabling us to create unique hardware solutions tailored to your
-                        requirements.
+                        {{ $t('hardware.desc1') }}
                         <br><br>
-                         We handle component sourcing, ensuring that only the highest quality parts are used. Our
-                        assembly process is rigorous, with multiple stages of testing to guarantee reliability and
-                        performance. Once the hardware is assembled, we integrate it with existing systems, ensuring
-                        seamless communication and compatibility across all platforms. In addition to new hardware
-                        development, we specialize in optimizing and upgrading existing systems. Whether it's improving
-                        performance, enhancing security, or adding new features, our team is equipped to handle all
-                        aspects of hardware maintenance and upgrades.
+                        {{ $t('hardware.desc2') }}
                         <br><br>
-                         At Parlak Nesil, we are committed to delivering hardware solutions that are not only functional
-                        but also innovative, scalable, and aligned with your business objectives.
+                        {{ $t('hardware.desc3') }}
                     </p>
                     <div class="flex items-center flex-wrap">
                         <p class="font-jetBrains font-normal lg:px-10 lg:py-3 px-6 py-2 mr-4 mb-4 lg:text-sm text-xs bg-m_amber-100 text-white"
@@ -52,7 +41,7 @@
                 </div>
             </div>
             <div class="flex flex-col mt-52">
-                <div class="flex flex-row items-center border-t-2 border-t-m_gray-500 py-10" v-for="item in hardware"
+                <div class="flex flex-row items-center border-t-2 border-t-m_gray-500 py-10" v-for="(item, index) in all_hardware"
                     :key="item.id">
                     <div class="w-full sm:mr-10 flex flex-col space-y-8">
                         <div class="flex flex-row"
@@ -69,7 +58,7 @@
                     </div>
                     <div class="w-[580px] h-80 hidden md:block"
                         v-scroll-reveal="{ origin: 'right', distance: '50px', duration: 1000 }">
-                        <img class="w-full h-full object-cover" v-lazy="item.img" lazy="loading">
+                        <img class="w-full h-full object-cover" v-lazy="all_hardware_imgs[index]" lazy="loading">
                     </div>
                 </div>
             </div>
@@ -83,6 +72,7 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import { hardware } from '@/data/index';
 export default {
     name: "Hardware",
     data() {
@@ -99,22 +89,22 @@ export default {
                 { id: 9, name: 'HP', delay: 900 },
                 { id: 10, name: 'Networking', delay: 1000 },
             ],
-            hardware: [
-                { id: 1, img: '/imgs/hardware-1.webp', name: 'Ministry of Foreign Affairs of Turkmenistan', cats: ['Cameras / Server / Computers / Printers / Installations / Archivers / Smart switches / Firewall'], desc: 'We provided all the necessary goods for video surveillance cameras and installation, service, united into one network, the Ministry of Foreign Affairs of Ashgabat itself, including the velayats of branches. We provided all the necessary goods for internal network location, installation and service. We provided goods, installation and maintenance of the checkpoint, installed software to record the arrival and departure of employees at a certain time. We provided goods, installation, configuration of servers, archivers, smart switches, firewall, internal IP telephony and their services. Transferred document management software from the old server to the new server. Provided computers, printers, installations and service.' },
-                { id: 2, img: '/imgs/hardware-2.webp', name: 'Ministry of Construction and Architecture of Turkmenistan', cats: ['Computers / Server / Printers / Switch / Firewall'], desc: 'Installed internal document management software. We provided all the necessary goods for an internal local network, installation and service. Provided with computers, printers, licenses for Microsoft Windows, Microsoft Office, Antivirus Kaspersky and their installations' },
-                { id: 3, img: '/imgs/hardware-3.webp', name: 'State concern "Turkmengas"', cats: ['Server / Archivers / Smart switches / Firewall / Installation / Service'], desc: 'We provided all the necessary goods for an internal local network and document circulation, installation, configuration of servers, archivers, smart switches, firewall, installation and service.' },
-                { id: 4, img: '/imgs/hardware-4.webp', name: 'Shopping center "Altyn Asyr"', cats: ['Server / Archivers / Smart switches / Firewall / Installation / Service'], desc: 'We provided all the necessary goods for an internal local network and document circulation, installation, configuration of servers, archivers, smart switches, firewall, installation and service. Installed unified software for introducing sales and accounting records. We provided Pos Terminals, cash registers, receipt programs, barcode scanners in all stores and their installations' },
-                { id: 5, img: '/imgs/hardware-5.webp', name: 'Ahal velayat, Kaka etrap textile factory', cats: ['Server / Archivers / Smart switches / Firewall / Installation / Service / Computers / Printers'], desc: 'We provided all the necessary goods for an internal local network and document circulation, installation, configuration of servers, archivers, smart switches, firewall, installation and service. Provided computers, printers, installations and service.' },
-                { id: 6, img: '/imgs/hardware-6.webp', name: 'Ahal velayat Babadaihan textile factory', cats: ['Server / Archivers / Smart switches / Firewall / Installation / Service / Computers / Printers'], desc: 'We provided all the necessary goods for an internal local network and document circulation, installation, configuration of servers, archivers, smart switches, firewall, city and internal telephony, installation and service. Provided computers, printers, installations and service.' },
-                { id: 7, img: '/imgs/hardware-7.webp', name: 'Balkan velayat "Turkmeniň Ak Öýi"', cats: ['Computers / Printers / Installation / Service'], desc: 'Provided computers, printers, installations and service' },
-                { id: 8, img: '/imgs/hardware-8.webp', name: 'Dashoguz velayat "Turkmeniň Ak Öýi"', cats: ['Computers / Printers / Installation / Service'], desc: 'Provided computers, printers, installations and service' },
-                { id: 9, img: '/imgs/hardware-9.webp', name: 'Balkan velayat, Magtymguly etrap “Köp ugurly hassahana”', cats: ['Computers / Printers / Installation / Service'], desc: 'Provided computers, printers, installations and service' }
-            ]
+            all_hardware: null,
+            all_hardware_imgs: null
         }
+    },
+    created() {
+        this.all_hardware = hardware[this.$i18n.locale]
+        this.all_hardware_imgs = hardware.imgs
     },
     components: {
         Navbar,
         Footer
-    }
+    },
+    watch: {
+        '$i18n.locale'(newLocale, _) {
+            this.all_hardware = hardware[newLocale]
+        },
+    },
 }
 </script>
