@@ -29,8 +29,9 @@
                     <h1
                         class="font-rajdhani font-bold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl uppercase w-fit">
                         {{ $t('about.title2') }}
+                        <span class="rounded-full text-m_orange-100 animate__animated animate__bounce">.</span>
                     </h1>
-                    <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div>
+                    <!-- <div class="rounded-full w-3 h-3 mb-4 bg-m_orange-100 animate__animated animate__bounce"></div> -->
                 </div>
                 <p class="font-inter font-normal lg:text-lg sm:text-base text-sm text-m_gray-300 md:w-1/2 w-full"
                     v-scroll-reveal="{ origin: 'bottom', distance: '50px', duration: 1000 }">

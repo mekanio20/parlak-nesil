@@ -10,6 +10,7 @@
                     <div class="flex items-end">
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight">
                             {{ $t('nav.title6') }}
+                            <!-- <span class="rounded-full text-m_orange-100 animate__animated animate__bounce">.</span> -->
                         </h1>
                         <div class="mb-2 ml-2">
                             <div
