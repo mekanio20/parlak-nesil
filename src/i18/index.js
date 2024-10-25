@@ -63,8 +63,8 @@ const messages = {
     nav: {
       title1: "Главная",
       title2: "О нас",
-      title3: "Хардваре",
-      title4: "Софтваре",
+      title3: "Железо",
+      title4: "ПО",
       title5: "Проекты",
       title6: "Контакт",
     },
