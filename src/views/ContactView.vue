@@ -69,7 +69,12 @@ export default {
                 title: this.title,
                 desc: this.desc
             })
-            console.log(response)
+            if (response.status === 200) {
+                alert('Habar ugradyldy!')
+                this.email = null
+                this.title = null
+                this.desc = null
+            }
         }
     }
 }
