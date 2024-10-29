@@ -22,20 +22,19 @@
                         <img class="w-full object-cover" src="/imgs/contact.webp">
                     </div>
                 </div>
-                <div class="xl:w-[550px] lg:w-[450px] md:w-[400px] w-[300px]">
-                    <input
+                <form @submit.prevent="feedBack" class="xl:w-[550px] lg:w-[450px] md:w-[400px] w-[300px]">
+                    <input v-model="email"
                         class="w-full py-4 mb-8 font-rajdhani font-semibold lg:text-xl text-lg border-b border-m_gray-500 text-m_gray-600 bg-transparent outline-none"
-                        type="text" placeholder="Your Name">
-                    <input
+                        type="email" :placeholder="$t('contact.title1')">
+                    <input v-model="title"
                         class="w-full py-4 mb-8 font-rajdhani font-semibold lg:text-xl text-lg border-b border-m_gray-500 text-m_gray-600 bg-transparent outline-none"
-                        type="email" placeholder="Your Email">
-                    <input
+                        type="text" :placeholder="$t('contact.title2')">
+                    <input v-model="desc"
                         class="w-full py-4 mb-8 font-rajdhani font-semibold lg:text-xl text-lg border-b border-m_gray-500 text-m_gray-600 bg-transparent outline-none"
-                        type="text" placeholder="Share your thoughts">
-                    <button
-                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">Share
-                        your feedback</button>
-                </div>
+                        type="text" :placeholder="$t('contact.title3')">
+                    <button type="submit"
+                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">{{ $t('contact.title4') }}</button>
+                </form>
             </div>
         </div>
         <div class="mt-20 relative z-50">
@@ -52,6 +51,18 @@ export default {
     components: {
         Navbar,
         Footer
+    },
+    data() {
+        return {
+            email: null,
+            title: null,
+            desc: null
+        }
+    },
+    methods: {
+        feedBack() {
+
+        }
     }
 }
 </script>

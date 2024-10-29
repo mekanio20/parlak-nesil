@@ -53,6 +53,12 @@ const messages = {
       desc4:
         "Parlak Nesil-de biz diňe bir talaplaryňyza laýyk däl-de, eýsem olary aşýan programma üpjünçiligini hödürlemäge borçlanýarys. Biz prosesiň ähli basgançaklarynda size ýakyn aragatnaşykda işleşip, soňky önümiň siziň iş maksatlyňyz we iş amallaryňyz bilen doly laýyk gelmegini üpjün edýäris.",
     },
+    contact: {
+      title1: 'E-poçta salgyňyz',
+      title2: 'Mazmunyň Ady',
+      title3: 'Pikiriňizi paýlaşyň',
+      title4: 'Teswiriňizi paýlaşyň',
+    },
     footer: {
       title1: "Habarlaşyň",
       title2: "Biziň salgymyz",
@@ -111,6 +117,12 @@ const messages = {
       desc4:
         "В Parlak Nesil мы стремимся предоставлять программные решения, которые не только соответствуют вашим ожиданиям, но и превосходят их. Мы тесно сотрудничаем с вами на протяжении всего процесса, гарантируя, что конечный продукт идеально соответствует вашим бизнес-целям и операционным потребностям.",
     },
+    contact: {
+      title1: 'Ваша электронная почта',
+      title2: 'Заголовок контента',
+      title3: 'Поделитесь своими мыслями',
+      title4: 'Поделитесь своим отзывом',
+    },
     footer: {
       title1: "Позвоните",
       title2: "Наш адрес",
@@ -168,6 +180,12 @@ const messages = {
         "We also provide software integration services, connecting different systems and platforms to create a cohesive, efficient workflow. Our expertise extends to cloud computing, database management, and API development, ensuring that your software ecosystem is robust and future-proof.",
       desc4:
         "At Parlak Nesil, we are committed to delivering software solutions that not only meet but exceed your expectations. We work closely with you throughout the entire process, ensuring that the final product aligns perfectly with your business goals and operational needs.",
+    },
+    contact: {
+      title1: "Your Email",
+      title2: "Content Title",
+      title3: "Share your thoughts",
+      title4: "Share your feedback",
     },
     footer: {
       title1: "Call",

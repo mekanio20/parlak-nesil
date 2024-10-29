@@ -50,7 +50,7 @@
                 <div class="relative group" v-for="item in items" :key="item.id">
                     <router-link :to="item.route"
                         class="px-2 py-2 xl:text-lg text-base uppercase font-jetBrains hover:text-m_gray-300 duration-300 text-white">
-                        {{ item.name }}
+                        {{ $t(`nav.title${item.id}`) }}
                     </router-link>
                 </div>
                 <div class="relative group block sm:hidden">
