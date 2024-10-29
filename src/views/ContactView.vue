@@ -8,7 +8,8 @@
             <div class="flex xl:flex-row flex-col items-center justify-between">
                 <div class="flex flex-col xl:items-start items-center xl:justify-between justify-center mt-10">
                     <div class="flex items-end">
-                        <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight">
+                        <h1
+                            class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-center font-jetBrains leading-tight">
                             {{ $t('nav.title6') }}
                             <!-- <span class="rounded-full text-m_orange-100 animate__animated animate__bounce">.</span> -->
                         </h1>
@@ -33,7 +34,8 @@
                         class="w-full py-4 mb-8 font-rajdhani font-semibold lg:text-xl text-lg border-b border-m_gray-500 text-m_gray-600 bg-transparent outline-none"
                         type="text" :placeholder="$t('contact.title3')">
                     <button type="submit"
-                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">{{ $t('contact.title4') }}</button>
+                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">{{
+                                $t('contact.title4') }}</button>
                 </form>
             </div>
         </div>
@@ -44,6 +46,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 export default {
@@ -60,8 +63,13 @@ export default {
         }
     },
     methods: {
-        feedBack() {
-
+        async feedBack() {
+            const response = await axios.post('https://parlaknesil.com/api/email/', {
+                email: this.email,
+                title: this.title,
+                desc: this.desc
+            })
+            console.log(response)
         }
     }
 }
