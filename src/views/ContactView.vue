@@ -59,21 +59,30 @@ export default {
         return {
             email: null,
             title: null,
-            desc: null
+            desc: null,
+            loading: false
         }
     },
     methods: {
         async feedBack() {
-            const response = await axios.post('https://parlaknesil.com/api/email/', {
-                email: this.email,
-                title: this.title,
-                desc: this.desc
-            })
-            if (response.status === 200) {
-                alert('Habar ugradyldy!')
-                this.email = null
-                this.title = null
-                this.desc = null
+            this.loading = true
+            try {
+                const response = await axios.post('https://parlaknesil.com/nodeapp/send-mail', {
+                    from: this.email,
+                    subject: this.title,
+                    text: this.desc
+                })
+                console.log(response)
+                if (response.status === 200) {
+                    alert('Habar ugradyldy!')
+                    this.email = null
+                    this.title = null
+                    this.desc = null
+                }
+            } catch (error) {
+                console.log(error)
+            } finally {
+                this.loading = false
             }
         }
     }
