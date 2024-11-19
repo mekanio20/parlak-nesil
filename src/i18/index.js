@@ -13,6 +13,7 @@ const messages = {
     home: {
       title1: "Pikirleriňizi durmuşa geçiriň",
       title2: "Biz näme edýäris",
+      title3: "Biziň hyzmatdaşlarymyz",
       cards: {
         title1: "En köp sanly çözümler",
         title2: "Islendik çylkarylykdaky web sahypalaryny işläp düzmek",
@@ -77,6 +78,7 @@ const messages = {
     home: {
       title1: "Позвольте нам сделать ваше видение реальностью",
       title2: "Чем мы занимаемся",
+      title3: "Наши партнеры",
       cards: {
         title1: "Полный спектр аппаратных решений",
         title2: "Разработка сайтов любой сложности",
@@ -141,6 +143,7 @@ const messages = {
     home: {
       title1: "Let Us Make Your Vision a Reality",
       title2: "What We Do",
+      title3: "Our Partners",
       cards: {
         title1: "Full range of hardware solutions",
         title2: "Development of websites of any complexity",

@@ -46,10 +46,26 @@
                         <h3 class="font-rajdhani font-medium px-6 text-center lg:text-xl text-lg text-white z-10">{{
                                     $t(`home.cards.title${item.id}`) }}</h3>
                         <p class="font-inter font-normal text-center lg:text-base text-sm z-10">{{
-                            $t(`home.cards.subtitle${item.id}`) }}</p>
+                                    $t(`home.cards.subtitle${item.id}`) }}</p>
                         <div class="absolute left-0 bottom-0 overflow-hidden">
                             <img src="/svg/blog-bg.svg">
                         </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 flex flex-col items-center justify-center py-20">
+                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-center font-jetBrains leading-tight"
+                        v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
+                        {{ $t('home.title3') }}
+                    </h1>
+                    <div class="w-full pt-32 flex items-center space-x-10 overflow-x-auto">
+                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
+                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
+                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
+                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
                     </div>
                 </div>
                 <div class="mt-20 relative z-50">

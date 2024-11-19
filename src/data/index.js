@@ -13,9 +13,9 @@ export const projects = {
       desc: "Online Courses is a dynamic platform that offers a wide range of educational programs designed to help you achieve your learning goals from anywhere in the world.",
       colors: ["#FFCC02", "#535353", "#FFFFFF"],
       tools: ["/icons/figma.webp", "/svg/django.svg"],
-      country: "Russia",
-      client: "Metall Market",
-      url: "",
+      country: "Kyrgyzstan",
+      client: "0-100",
+      url: "http://0-100.community/",
     },
     {
       id: 21,
