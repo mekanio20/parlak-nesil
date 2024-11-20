@@ -57,14 +57,14 @@
                         v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
                         {{ $t('home.title3') }}
                     </h1>
-                    <div class="w-full pt-32 flex items-center space-x-10 overflow-x-auto">
-                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                    <div class="w-full pt-32 flex items-center space-x-20 overflow-x-auto">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
                         <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
                         <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
                         <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[100px] w-[60px] object-cover" src="/imgs/partner1.webp" alt="">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
                         <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
                     </div>
                 </div>
