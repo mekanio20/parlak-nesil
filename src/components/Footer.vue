@@ -17,6 +17,7 @@
                     info@parlaknesil.com</a>
             </div>
         </div>
+        <div class="w-full mx-auto text-center font-sf_pro font-normal lg:text-base sm:text-sm mobile:text-sm text-xs text-m_gray-200 mt-10">All Rights Reserved | <router-link to="/privacy" class="text-m_green-100 underline">Privacy Policy</router-link> </div>
     </div>
 </template>
 
