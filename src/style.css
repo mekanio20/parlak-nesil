@@ -11,15 +11,6 @@
   width: 6px;
 }
 
-/* ::-webkit-scrollbar-thumb {
-  background-color: #FF630D;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #e55a1b;
-} */
-
 ::-webkit-scrollbar-track {
   background-color: black;
 }

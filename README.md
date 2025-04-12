@@ -1,5 +1,40 @@
-# Vue 3 + Vite
+# PARLAK NESIL
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Proýekt barada
+Parlak Nesil - IT hyzmatlaryny üpjün edýän kompaniýa. Biz programma üpjünçiligi we taslama amala aşyrmak boýunça hyzmatlar hödürleýäris.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+### Aýratynlyklary
+- 🌐 Web sahypalary işläp düzmek
+- 📱 Mobil programmalar
+- 💻 Enjam çözgütleri
+- 🎨 UI/UX dizaýn
+- 🌍 Köp dilli goldama (TM, EN, RU)
+
+### Gurmak
+```bash
+# Proýekti klonlaň
+git clone https://github.com/mekanio20/parlak-nesil.git
+
+# Proýekt papkasyna giriň
+cd parlak-nesil
+
+# Gerekli paketlary ýükläň
+npm install
+
+# Proýekti işe goýberiň
+npm run start
+```
+
+## 🛠 Tehnologiýalar
+
+- Vue.js 3
+- Vue Router
+- Vuex
+- Tailwind CSS
+- i18n (Internationalization)
+- ScrollReveal
+- Animate.css
+
+## 📝  Lisenziýa
+
+MIT Lisenziýasy
