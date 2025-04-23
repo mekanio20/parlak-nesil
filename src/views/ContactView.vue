@@ -34,8 +34,14 @@
                         class="w-full py-4 mb-8 font-rajdhani font-semibold lg:text-xl text-lg border-b border-m_gray-500 text-m_gray-600 bg-transparent outline-none"
                         type="text" :placeholder="$t('contact.title3')">
                     <button type="submit"
-                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">{{
-                                $t('contact.title4') }}</button>
+                        class="w-full mt-10 px-6 py-4 bg-m_orange-100 rounded-sm text-white font-bold text-nowrap font-jetBrains hover:opacity-80 duration-500">
+                        <span v-if="loading">
+                            Loading...
+                        </span>
+                        <span v-else>
+                            {{ $t('contact.title4') }}
+                        </span>    
+                    </button>
                 </form>
             </div>
         </div>
@@ -68,7 +74,7 @@ export default {
             this.loading = true
             try {
                 const response = await axios.post('https://parlaknesil.com/nodeapp/send-mail', {
-                    from: this.email,
+                    gmail: this.email,
                     subject: this.title,
                     text: this.desc
                 })
@@ -78,6 +84,8 @@ export default {
                     this.email = null
                     this.title = null
                     this.desc = null
+                } else {
+                    alert('Habar ugradylmady!')
                 }
             } catch (error) {
                 console.log(error)
