@@ -22,10 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# 
-yarn.lock
-public/fonts
-public/icons
-public/imgs
-public/svg

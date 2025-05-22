@@ -20,8 +20,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full h-full relative z-20 bg-black" style="box-shadow: 0 -50px 40px 5px #000">
-                <div class="w-full h-full absolute -top-10 -z-10">
+            <div class="w-full h-full relative z-20 bg-black overflow-hidden" style="box-shadow: 0 -50px 40px 5px #000">
+                <div class="w-full h-full absolute -top-[360px] -z-10">
                     <SvgAnimation />
                 </div>
                 <div
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="sm:container px-4 flex items-center justify-center flex-wrap overflow-hidden">
-                    <div class="flex items-center flex-col sm:px-12 px-8 sm:py-10 py-6 lg:mr-6 mr-8 mb-8 sm:space-y-8 space-y-4 sm:w-96 w-80 lg:h-80 rounded-tl-3xl rounded-br-3xl bg-m_amber-100 relative"
+                    <div class="flex items-center flex-col sm:px-12 px-8 sm:py-10 py-6 lg:mr-6 sm:mr-8 mb-8 sm:space-y-8 space-y-4 sm:w-96 w-80 lg:h-80 rounded-tl-3xl rounded-br-3xl bg-m_amber-100 relative"
                         v-for="item in items" :key="item.id"
                         v-scroll-reveal="{ origin: item.animate, distance: '50px', duration: 1000 }">
                         <img class="sm:w-14 w-12 object-cover" :src="item.icon">
@@ -57,15 +57,13 @@
                         v-scroll-reveal="{ origin: 'top', distance: '50px', duration: 1000 }">
                         {{ $t('home.title3') }}
                     </h1>
-                    <div class="w-full pt-32 flex items-center space-x-20 overflow-x-auto">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp" alt="">
-                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp" alt="">
+                    <div class="w-full pt-32 flex items-center space-x-40 overflow-x-auto">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner3.webp">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner1.webp">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner2.webp">
+                        <img class="sm:w-[200px] w-[100px] object-cover" src="/imgs/partner3.webp">
                     </div>
                 </div>
                 <div class="mt-20 relative z-50">
