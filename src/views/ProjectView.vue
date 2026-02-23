@@ -17,16 +17,16 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:columns-3 sm:columns-2 columns-1 gap-8 pb-20">
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pb-20">
                 <div v-for="(item, index) in all_projects" :key="index"
                     v-scroll-reveal="{ origin: 'top', distance: '100px', duration: 1000 }"
                     class="w-full mb-10 overflow-hidden">
                     <router-link :to="`/project/${item.id}`">
-                        <img class="w-full object-cover mb-3" :src="`/imgs/${item?.images[0]}`" />
+                        <img class="w-full object-cover mb-3 rounded-md" :src="item.main_image" />
                         <h3 class="font-semibold font-rajdhani lg:text-2xl sm:text-xl text-lg">
-                            {{ item.name }}
+                            {{ item.title }}
                         </h3>
-                        <p class="font-normal font-inter text-m_orange-100 sm:text-lg text-base">{{ item.cat }}</p>
+                        <p class="font-normal font-inter text-m_orange-100 sm:text-lg text-base">{{ item.technologies }}</p>
                     </router-link>
                 </div>
             </div>
@@ -38,13 +38,15 @@
 </template>
 
 <script>
+import api from '@/api';
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import { projects } from '@/data/index';
 export default {
     name: "Project",
     async created() {
-        this.all_projects = projects[this.$i18n.locale]
+        const { data } = await api.get('/projects/');
+        this.all_projects = data
     },
     data() {
         return {
